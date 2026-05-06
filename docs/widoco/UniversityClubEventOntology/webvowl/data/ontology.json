@@ -1,0 +1,787 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://schema.org", "http://www.w3.org/2000/01/rdf-schema", "http://example.org/university-club-event-ontology", "http://www.w3.org/2001/XMLSchema", "http://xmlns.com/foaf/0.1" ],
+    "iri" : "http://example.org/university-club-event-ontology",
+    "version" : "2.0",
+    "labels" : {
+      "en" : "University Club and Event Management Ontology"
+    },
+    "comments" : {
+      "en" : "Version 2 of an ontology for representing university clubs, students, events, memberships, attendance records, announcements, interests, roles, and semantic question answering support."
+    },
+    "other" : {
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "2.0",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "0",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "19",
+    "type" : "owl:Class"
+  }, {
+    "id" : "21",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "27",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "29",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "33",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "17",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "13",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "32",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "35",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "15",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "22",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "38",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "40",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "25",
+    "type" : "owl:Class"
+  }, {
+    "id" : "31",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://example.org/university-club-event-ontology#Location",
+    "baseIri" : "http://example.org/university-club-event-ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Location",
+      "en" : "Location"
+    },
+    "individuals" : [ {
+      "iri" : "http://example.org/university-club-event-ontology#RoomA101",
+      "baseIri" : "http://example.org/university-club-event-ontology",
+      "labels" : {
+        "IRI-based" : "RoomA101",
+        "en" : "Room A101"
+      }
+    } ],
+    "comment" : {
+      "en" : "A physical or virtual place where an event is held."
+    },
+    "id" : "0",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://example.org/university-club-event-ontology#Club",
+    "baseIri" : "http://example.org/university-club-event-ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Club",
+      "en" : "Club"
+    },
+    "individuals" : [ {
+      "iri" : "http://example.org/university-club-event-ontology#ComputerScienceClub",
+      "baseIri" : "http://example.org/university-club-event-ontology",
+      "labels" : {
+        "IRI-based" : "ComputerScienceClub"
+      }
+    } ],
+    "comment" : {
+      "en" : "A student organization within a university."
+    },
+    "id" : "5"
+  }, {
+    "iri" : "http://example.org/university-club-event-ontology#Attendance",
+    "baseIri" : "http://example.org/university-club-event-ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Attendance",
+      "en" : "Attendance"
+    },
+    "comment" : {
+      "en" : "A record showing that a student attended an event."
+    },
+    "id" : "6"
+  }, {
+    "iri" : "http://example.org/university-club-event-ontology#Organizer",
+    "baseIri" : "http://example.org/university-club-event-ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Organizer",
+      "en" : "Organizer"
+    },
+    "comment" : {
+      "en" : "A person or club responsible for organizing an event."
+    },
+    "id" : "7"
+  }, {
+    "iri" : "http://example.org/university-club-event-ontology#EventCategory",
+    "baseIri" : "http://example.org/university-club-event-ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EventCategory",
+      "en" : "Event Category"
+    },
+    "individuals" : [ {
+      "iri" : "http://example.org/university-club-event-ontology#TechnologyCategory",
+      "baseIri" : "http://example.org/university-club-event-ontology",
+      "labels" : {
+        "IRI-based" : "TechnologyCategory",
+        "en" : "Technology Event"
+      }
+    } ],
+    "comment" : {
+      "en" : "A category describing the topic or type of an event."
+    },
+    "id" : "19"
+  }, {
+    "iri" : "http://example.org/university-club-event-ontology#Announcement",
+    "baseIri" : "http://example.org/university-club-event-ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Announcement",
+      "en" : "Announcement"
+    },
+    "individuals" : [ {
+      "iri" : "http://example.org/university-club-event-ontology#AIWorkshopAnnouncement",
+      "baseIri" : "http://example.org/university-club-event-ontology",
+      "labels" : {
+        "IRI-based" : "AIWorkshopAnnouncement"
+      }
+    } ],
+    "comment" : {
+      "en" : "A text-based announcement describing a club, event, or activity."
+    },
+    "id" : "21"
+  }, {
+    "iri" : "http://example.org/university-club-event-ontology#Event",
+    "baseIri" : "http://example.org/university-club-event-ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Event",
+      "en" : "Event"
+    },
+    "individuals" : [ {
+      "iri" : "http://example.org/university-club-event-ontology#AIWorkshop2026",
+      "baseIri" : "http://example.org/university-club-event-ontology",
+      "labels" : {
+        "IRI-based" : "AIWorkshop2026"
+      }
+    } ],
+    "comment" : {
+      "en" : "An activity organized by a university club."
+    },
+    "id" : "10",
+    "superClasses" : [ "25" ]
+  }, {
+    "iri" : "http://xmlns.com/foaf/0.1/Person",
+    "baseIri" : "http://xmlns.com/foaf/0.1",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Person"
+    },
+    "subClasses" : [ "3" ],
+    "attributes" : [ "external" ],
+    "id" : "27"
+  }, {
+    "iri" : "http://example.org/university-club-event-ontology#Role",
+    "baseIri" : "http://example.org/university-club-event-ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Role",
+      "en" : "Role"
+    },
+    "individuals" : [ {
+      "iri" : "http://example.org/university-club-event-ontology#ClubMember",
+      "baseIri" : "http://example.org/university-club-event-ontology",
+      "labels" : {
+        "IRI-based" : "ClubMember"
+      }
+    } ],
+    "comment" : {
+      "en" : "A role assigned to a student in a club or event, such as member, president, organizer, or participant."
+    },
+    "id" : "4"
+  }, {
+    "iri" : "http://example.org/university-club-event-ontology#Student",
+    "baseIri" : "http://example.org/university-club-event-ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Student",
+      "en" : "Student"
+    },
+    "individuals" : [ {
+      "iri" : "http://example.org/university-club-event-ontology#ArdaStudent",
+      "baseIri" : "http://example.org/university-club-event-ontology",
+      "labels" : {
+        "IRI-based" : "ArdaStudent"
+      }
+    } ],
+    "comment" : {
+      "en" : "A university student who may join clubs, attend events, and have interests."
+    },
+    "id" : "3",
+    "superClasses" : [ "27" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "29",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#date",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "33",
+    "label" : {
+      "IRI-based" : "date"
+    }
+  }, {
+    "iri" : "http://example.org/university-club-event-ontology#Recommendation",
+    "baseIri" : "http://example.org/university-club-event-ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Recommendation",
+      "en" : "Recommendation"
+    },
+    "individuals" : [ {
+      "iri" : "http://example.org/university-club-event-ontology#RecommendationForArda",
+      "baseIri" : "http://example.org/university-club-event-ontology",
+      "labels" : {
+        "IRI-based" : "RecommendationForArda"
+      }
+    } ],
+    "comment" : {
+      "en" : "A suggested club or event generated according to student interests, memberships, or participation history."
+    },
+    "id" : "9"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "17",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "13",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "32",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "35",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "15",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "22",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "38",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://example.org/university-club-event-ontology#Interest",
+    "baseIri" : "http://example.org/university-club-event-ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Interest",
+      "en" : "Interest"
+    },
+    "individuals" : [ {
+      "iri" : "http://example.org/university-club-event-ontology#ArtificialIntelligence",
+      "baseIri" : "http://example.org/university-club-event-ontology",
+      "labels" : {
+        "IRI-based" : "ArtificialIntelligence"
+      }
+    } ],
+    "comment" : {
+      "en" : "A student's area of interest, such as artificial intelligence, software development, music, or sports."
+    },
+    "id" : "12"
+  }, {
+    "iri" : "http://example.org/university-club-event-ontology#Membership",
+    "baseIri" : "http://example.org/university-club-event-ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Membership",
+      "en" : "Membership"
+    },
+    "comment" : {
+      "en" : "A relationship representing a student's membership in a club."
+    },
+    "id" : "40"
+  }, {
+    "iri" : "http://schema.org/Place",
+    "baseIri" : "http://schema.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Place"
+    },
+    "subClasses" : [ "0" ],
+    "attributes" : [ "external" ],
+    "id" : "1"
+  }, {
+    "iri" : "http://schema.org/Event",
+    "baseIri" : "http://schema.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Event"
+    },
+    "subClasses" : [ "10" ],
+    "attributes" : [ "external" ],
+    "id" : "25"
+  }, {
+    "iri" : "http://example.org/university-club-event-ontology#SemanticQuestion",
+    "baseIri" : "http://example.org/university-club-event-ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SemanticQuestion",
+      "en" : "Semantic Question"
+    },
+    "individuals" : [ {
+      "iri" : "http://example.org/university-club-event-ontology#Question1",
+      "baseIri" : "http://example.org/university-club-event-ontology",
+      "labels" : {
+        "IRI-based" : "Question1"
+      }
+    }, {
+      "iri" : "http://example.org/university-club-event-ontology#Question2",
+      "baseIri" : "http://example.org/university-club-event-ontology",
+      "labels" : {
+        "IRI-based" : "Question2"
+      }
+    } ],
+    "comment" : {
+      "en" : "A natural language question that can be answered using ontology concepts and relationships."
+    },
+    "id" : "31"
+  } ],
+  "property" : [ {
+    "id" : "2",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "8",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "11",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "14",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "16",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "18",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "20",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "23",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "24",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "26",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "28",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "30",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "34",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "36",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "37",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "39",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "41",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "42",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "43",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "44",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "45",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "46",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "47",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "48",
+    "type" : "owl:datatypeProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "http://example.org/university-club-event-ontology#hasRole",
+    "baseIri" : "http://example.org/university-club-event-ontology",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "hasRole",
+      "en" : "has role"
+    },
+    "domain" : "3",
+    "comment" : {
+      "en" : "Connects a student to a role in a club or event."
+    },
+    "attributes" : [ "object" ],
+    "id" : "2"
+  }, {
+    "iri" : "http://example.org/university-club-event-ontology#recommendsEvent",
+    "baseIri" : "http://example.org/university-club-event-ontology",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "recommendsEvent",
+      "en" : "recommends event"
+    },
+    "domain" : "9",
+    "comment" : {
+      "en" : "Connects a recommendation to a suggested event."
+    },
+    "attributes" : [ "object" ],
+    "id" : "8"
+  }, {
+    "iri" : "http://example.org/university-club-event-ontology#interestName",
+    "baseIri" : "http://example.org/university-club-event-ontology",
+    "range" : "13",
+    "label" : {
+      "IRI-based" : "interestName",
+      "en" : "interest name"
+    },
+    "domain" : "12",
+    "attributes" : [ "datatype" ],
+    "id" : "11"
+  }, {
+    "iri" : "http://example.org/university-club-event-ontology#studentId",
+    "baseIri" : "http://example.org/university-club-event-ontology",
+    "range" : "15",
+    "label" : {
+      "IRI-based" : "studentId",
+      "en" : "student ID"
+    },
+    "domain" : "3",
+    "attributes" : [ "datatype" ],
+    "id" : "14"
+  }, {
+    "iri" : "http://example.org/university-club-event-ontology#eventTitle",
+    "baseIri" : "http://example.org/university-club-event-ontology",
+    "range" : "17",
+    "label" : {
+      "IRI-based" : "eventTitle",
+      "en" : "event title"
+    },
+    "domain" : "10",
+    "attributes" : [ "datatype" ],
+    "id" : "16"
+  }, {
+    "iri" : "http://example.org/university-club-event-ontology#hasLocation",
+    "baseIri" : "http://example.org/university-club-event-ontology",
+    "range" : "0",
+    "label" : {
+      "IRI-based" : "hasLocation",
+      "en" : "has location"
+    },
+    "domain" : "10",
+    "comment" : {
+      "en" : "Connects an event to its location."
+    },
+    "attributes" : [ "object" ],
+    "id" : "18"
+  }, {
+    "iri" : "http://example.org/university-club-event-ontology#announcementText",
+    "baseIri" : "http://example.org/university-club-event-ontology",
+    "range" : "22",
+    "label" : {
+      "IRI-based" : "announcementText",
+      "en" : "announcement text"
+    },
+    "domain" : "21",
+    "attributes" : [ "datatype" ],
+    "id" : "20"
+  }, {
+    "iri" : "http://example.org/university-club-event-ontology#matchesInterest",
+    "baseIri" : "http://example.org/university-club-event-ontology",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "matchesInterest",
+      "en" : "matches interest"
+    },
+    "domain" : "10",
+    "comment" : {
+      "en" : "Connects an event to an interest area that it matches."
+    },
+    "attributes" : [ "object" ],
+    "id" : "23"
+  }, {
+    "iri" : "http://example.org/university-club-event-ontology#organizes",
+    "baseIri" : "http://example.org/university-club-event-ontology",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "organizes",
+      "en" : "organizes"
+    },
+    "domain" : "5",
+    "comment" : {
+      "en" : "Connects a club to an event it organizes."
+    },
+    "attributes" : [ "object" ],
+    "id" : "24"
+  }, {
+    "range" : "1",
+    "domain" : "0",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "26"
+  }, {
+    "range" : "25",
+    "domain" : "10",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "28"
+  }, {
+    "iri" : "http://example.org/university-club-event-ontology#questionText",
+    "baseIri" : "http://example.org/university-club-event-ontology",
+    "range" : "32",
+    "label" : {
+      "IRI-based" : "questionText",
+      "en" : "question text"
+    },
+    "domain" : "31",
+    "attributes" : [ "datatype" ],
+    "id" : "30"
+  }, {
+    "iri" : "http://example.org/university-club-event-ontology#hasCategory",
+    "baseIri" : "http://example.org/university-club-event-ontology",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "hasCategory",
+      "en" : "has category"
+    },
+    "domain" : "10",
+    "comment" : {
+      "en" : "Connects an event to its category."
+    },
+    "attributes" : [ "object" ],
+    "id" : "34"
+  }, {
+    "range" : "27",
+    "domain" : "3",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "36"
+  }, {
+    "iri" : "http://example.org/university-club-event-ontology#attends",
+    "baseIri" : "http://example.org/university-club-event-ontology",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "attends",
+      "en" : "attends"
+    },
+    "domain" : "3",
+    "comment" : {
+      "en" : "Connects a student to an event they attend."
+    },
+    "attributes" : [ "object" ],
+    "id" : "37"
+  }, {
+    "iri" : "http://example.org/university-club-event-ontology#attendanceStatus",
+    "baseIri" : "http://example.org/university-club-event-ontology",
+    "range" : "38",
+    "label" : {
+      "IRI-based" : "attendanceStatus",
+      "en" : "attendance status"
+    },
+    "domain" : "6",
+    "attributes" : [ "datatype" ],
+    "id" : "39"
+  }, {
+    "iri" : "http://example.org/university-club-event-ontology#recommendedFor",
+    "baseIri" : "http://example.org/university-club-event-ontology",
+    "range" : "3",
+    "label" : {
+      "IRI-based" : "recommendedFor",
+      "en" : "recommended for"
+    },
+    "domain" : "9",
+    "comment" : {
+      "en" : "Connects a recommendation to the student who receives it."
+    },
+    "attributes" : [ "object" ],
+    "id" : "41"
+  }, {
+    "iri" : "http://example.org/university-club-event-ontology#hasInterest",
+    "baseIri" : "http://example.org/university-club-event-ontology",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "hasInterest",
+      "en" : "has interest"
+    },
+    "domain" : "3",
+    "comment" : {
+      "en" : "Connects a student to an interest area."
+    },
+    "attributes" : [ "object" ],
+    "id" : "42"
+  }, {
+    "iri" : "http://example.org/university-club-event-ontology#roleName",
+    "baseIri" : "http://example.org/university-club-event-ontology",
+    "range" : "35",
+    "label" : {
+      "IRI-based" : "roleName",
+      "en" : "role name"
+    },
+    "domain" : "4",
+    "attributes" : [ "datatype" ],
+    "id" : "43"
+  }, {
+    "iri" : "http://example.org/university-club-event-ontology#memberOf",
+    "baseIri" : "http://example.org/university-club-event-ontology",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "memberOf",
+      "en" : "member of"
+    },
+    "domain" : "3",
+    "comment" : {
+      "en" : "Connects a student to a club they are a member of."
+    },
+    "attributes" : [ "object" ],
+    "id" : "44"
+  }, {
+    "iri" : "http://example.org/university-club-event-ontology#hasAnnouncement",
+    "baseIri" : "http://example.org/university-club-event-ontology",
+    "range" : "21",
+    "label" : {
+      "IRI-based" : "hasAnnouncement",
+      "en" : "has announcement"
+    },
+    "domain" : "10",
+    "comment" : {
+      "en" : "Connects an event to its announcement text."
+    },
+    "attributes" : [ "object" ],
+    "id" : "45"
+  }, {
+    "iri" : "http://example.org/university-club-event-ontology#hasOrganizer",
+    "baseIri" : "http://example.org/university-club-event-ontology",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "hasOrganizer",
+      "en" : "has organizer"
+    },
+    "domain" : "10",
+    "comment" : {
+      "en" : "Connects an event to its organizer."
+    },
+    "attributes" : [ "object" ],
+    "id" : "46"
+  }, {
+    "iri" : "http://example.org/university-club-event-ontology#clubName",
+    "baseIri" : "http://example.org/university-club-event-ontology",
+    "range" : "29",
+    "label" : {
+      "IRI-based" : "clubName",
+      "en" : "club name"
+    },
+    "domain" : "5",
+    "attributes" : [ "datatype" ],
+    "id" : "47"
+  }, {
+    "iri" : "http://example.org/university-club-event-ontology#eventDate",
+    "baseIri" : "http://example.org/university-club-event-ontology",
+    "range" : "33",
+    "label" : {
+      "IRI-based" : "eventDate",
+      "en" : "event date"
+    },
+    "domain" : "10",
+    "attributes" : [ "datatype" ],
+    "id" : "48"
+  } ]
+}

@@ -1,0 +1,1048 @@
+<h2 id="crossreference" class="list">Cross-reference for University Club and Event Management Ontology classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by University Club and Event Management Ontology.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Classes</h3>
+ <ul class="hlist">
+  <li><a href="#Announcement" title="http://example.org/university-club-event-ontology#Announcement">Announcement</a></li>
+  <li><a href="#Attendance" title="http://example.org/university-club-event-ontology#Attendance">Attendance</a></li>
+  <li><a href="#Club" title="http://example.org/university-club-event-ontology#Club">Club</a></li>
+  <li><a href="#Event" title="http://example.org/university-club-event-ontology#Event">Event</a></li>
+  <li><a href="#EventCategory" title="http://example.org/university-club-event-ontology#EventCategory">Event Category</a></li>
+  <li><a href="#Interest" title="http://example.org/university-club-event-ontology#Interest">Interest</a></li>
+  <li><a href="#Location" title="http://example.org/university-club-event-ontology#Location">Location</a></li>
+  <li><a href="#Membership" title="http://example.org/university-club-event-ontology#Membership">Membership</a></li>
+  <li><a href="#Organizer" title="http://example.org/university-club-event-ontology#Organizer">Organizer</a></li>
+  <li><a href="#Recommendation" title="http://example.org/university-club-event-ontology#Recommendation">Recommendation</a></li>
+  <li><a href="#Role" title="http://example.org/university-club-event-ontology#Role">Role</a></li>
+  <li><a href="#SemanticQuestion" title="http://example.org/university-club-event-ontology#SemanticQuestion">Semantic Question</a></li>
+  <li><a href="#Student" title="http://example.org/university-club-event-ontology#Student">Student</a></li>
+ </ul>
+ <div class="entity" id="Announcement">
+  <h3>Announcement<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/university-club-event-ontology#Announcement</p>
+  <div class="comment">
+   <span class="markdown">A text-based announcement describing a club, event, or activity.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#announcementText" title="http://example.org/university-club-event-ontology#announcementText">announcement text</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasAnnouncement" title="http://example.org/university-club-event-ontology#hasAnnouncement">has announcement</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#AIWorkshopAnnouncement" title="http://example.org/university-club-event-ontology#AIWorkshopAnnouncement">A I Workshop Announcement</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Attendance">
+  <h3>Attendance<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/university-club-event-ontology#Attendance</p>
+  <div class="comment">
+   <span class="markdown">A record showing that a student attended an event.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#attendanceStatus" title="http://example.org/university-club-event-ontology#attendanceStatus">attendance status</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Club">
+  <h3>Club<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/university-club-event-ontology#Club</p>
+  <div class="comment">
+   <span class="markdown">A student organization within a university.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#clubName" title="http://example.org/university-club-event-ontology#clubName">club name</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#organizes" title="http://example.org/university-club-event-ontology#organizes">organizes</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#memberOf" title="http://example.org/university-club-event-ontology#memberOf">member of</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#ComputerScienceClub" title="http://example.org/university-club-event-ontology#ComputerScienceClub">Computer Science Club</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Event">
+  <h3>Event<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/university-club-event-ontology#Event</p>
+  <div class="comment">
+   <span class="markdown">An activity organized by a university club.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://schema.org/Event" target="_blank" title="http://schema.org/Event">Event</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#eventDate" title="http://example.org/university-club-event-ontology#eventDate">event date</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#eventTitle" title="http://example.org/university-club-event-ontology#eventTitle">event title</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasAnnouncement" title="http://example.org/university-club-event-ontology#hasAnnouncement">has announcement</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasCategory" title="http://example.org/university-club-event-ontology#hasCategory">has category</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasLocation" title="http://example.org/university-club-event-ontology#hasLocation">has location</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasOrganizer" title="http://example.org/university-club-event-ontology#hasOrganizer">has organizer</a> <sup class="type-op" title="object property">op</sup>, <a href="#matchesInterest" title="http://example.org/university-club-event-ontology#matchesInterest">matches interest</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#attends" title="http://example.org/university-club-event-ontology#attends">attends</a> <sup class="type-op" title="object property">op</sup>, <a href="#organizes" title="http://example.org/university-club-event-ontology#organizes">organizes</a> <sup class="type-op" title="object property">op</sup>, <a href="#recommendsEvent" title="http://example.org/university-club-event-ontology#recommendsEvent">recommends event</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#AIWorkshop2026" title="http://example.org/university-club-event-ontology#AIWorkshop2026">A I Workshop2026</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="EventCategory">
+  <h3>Event Category<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/university-club-event-ontology#EventCategory</p>
+  <div class="comment">
+   <span class="markdown">A category describing the topic or type of an event.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasCategory" title="http://example.org/university-club-event-ontology#hasCategory">has category</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#TechnologyCategory" title="http://example.org/university-club-event-ontology#TechnologyCategory">Technology Event</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Interest">
+  <h3>Interest<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/university-club-event-ontology#Interest</p>
+  <div class="comment">
+   <span class="markdown">A student's area of interest, such as artificial intelligence, software development, music, or sports.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#interestName" title="http://example.org/university-club-event-ontology#interestName">interest name</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasInterest" title="http://example.org/university-club-event-ontology#hasInterest">has interest</a> <sup class="type-op" title="object property">op</sup>, <a href="#matchesInterest" title="http://example.org/university-club-event-ontology#matchesInterest">matches interest</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#ArtificialIntelligence" title="http://example.org/university-club-event-ontology#ArtificialIntelligence">Artificial Intelligence</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Location">
+  <h3>Location<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/university-club-event-ontology#Location</p>
+  <div class="comment">
+   <span class="markdown">A physical or virtual place where an event is held.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://schema.org/Place" target="_blank" title="http://schema.org/Place">Place</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasLocation" title="http://example.org/university-club-event-ontology#hasLocation">has location</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#RoomA101" title="http://example.org/university-club-event-ontology#RoomA101">Room A101</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Membership">
+  <h3>Membership<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/university-club-event-ontology#Membership</p>
+  <div class="comment">
+   <span class="markdown">A relationship representing a student's membership in a club.</span>
+  </div>
+ </div>
+ <div class="entity" id="Organizer">
+  <h3>Organizer<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/university-club-event-ontology#Organizer</p>
+  <div class="comment">
+   <span class="markdown">A person or club responsible for organizing an event.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasOrganizer" title="http://example.org/university-club-event-ontology#hasOrganizer">has organizer</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Recommendation">
+  <h3>Recommendation<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/university-club-event-ontology#Recommendation</p>
+  <div class="comment">
+   <span class="markdown">A suggested club or event generated according to student interests, memberships, or participation history.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#recommendedFor" title="http://example.org/university-club-event-ontology#recommendedFor">recommended for</a> <sup class="type-op" title="object property">op</sup>, <a href="#recommendsEvent" title="http://example.org/university-club-event-ontology#recommendsEvent">recommends event</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#RecommendationForArda" title="http://example.org/university-club-event-ontology#RecommendationForArda">Recommendation For Arda</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Role">
+  <h3>Role<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/university-club-event-ontology#Role</p>
+  <div class="comment">
+   <span class="markdown">A role assigned to a student in a club or event, such as member, president, organizer, or participant.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#roleName" title="http://example.org/university-club-event-ontology#roleName">role name</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasRole" title="http://example.org/university-club-event-ontology#hasRole">has role</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#ClubMember" title="http://example.org/university-club-event-ontology#ClubMember">Club Member</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SemanticQuestion">
+  <h3>Semantic Question<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/university-club-event-ontology#SemanticQuestion</p>
+  <div class="comment">
+   <span class="markdown">A natural language question that can be answered using ontology concepts and relationships.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#questionText" title="http://example.org/university-club-event-ontology#questionText">question text</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#Question1" title="http://example.org/university-club-event-ontology#Question1">Question1</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Question2" title="http://example.org/university-club-event-ontology#Question2">Question2</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Student">
+  <h3>Student<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/university-club-event-ontology#Student</p>
+  <div class="comment">
+   <span class="markdown">A university student who may join clubs, attend events, and have interests.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://xmlns.com/foaf/0.1/Person" target="_blank" title="http://xmlns.com/foaf/0.1/Person">Person</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#attends" title="http://example.org/university-club-event-ontology#attends">attends</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasInterest" title="http://example.org/university-club-event-ontology#hasInterest">has interest</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasRole" title="http://example.org/university-club-event-ontology#hasRole">has role</a> <sup class="type-op" title="object property">op</sup>, <a href="#memberOf" title="http://example.org/university-club-event-ontology#memberOf">member of</a> <sup class="type-op" title="object property">op</sup>, <a href="#studentId" title="http://example.org/university-club-event-ontology#studentId">student ID</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#recommendedFor" title="http://example.org/university-club-event-ontology#recommendedFor">recommended for</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#ArdaStudent" title="http://example.org/university-club-event-ontology#ArdaStudent">Arda Student</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h3 id="properties" class="list">Object Properties</h3>
+ <ul class="hlist">
+  <li><a href="#attends" title="http://example.org/university-club-event-ontology#attends">attends</a></li>
+  <li><a href="#hasAnnouncement" title="http://example.org/university-club-event-ontology#hasAnnouncement">has announcement</a></li>
+  <li><a href="#hasCategory" title="http://example.org/university-club-event-ontology#hasCategory">has category</a></li>
+  <li><a href="#hasInterest" title="http://example.org/university-club-event-ontology#hasInterest">has interest</a></li>
+  <li><a href="#hasLocation" title="http://example.org/university-club-event-ontology#hasLocation">has location</a></li>
+  <li><a href="#hasOrganizer" title="http://example.org/university-club-event-ontology#hasOrganizer">has organizer</a></li>
+  <li><a href="#hasRole" title="http://example.org/university-club-event-ontology#hasRole">has role</a></li>
+  <li><a href="#matchesInterest" title="http://example.org/university-club-event-ontology#matchesInterest">matches interest</a></li>
+  <li><a href="#memberOf" title="http://example.org/university-club-event-ontology#memberOf">member of</a></li>
+  <li><a href="#organizes" title="http://example.org/university-club-event-ontology#organizes">organizes</a></li>
+  <li><a href="#recommendedFor" title="http://example.org/university-club-event-ontology#recommendedFor">recommended for</a></li>
+  <li><a href="#recommendsEvent" title="http://example.org/university-club-event-ontology#recommendsEvent">recommends event</a></li>
+ </ul>
+ <div class="entity" id="attends">
+  <h3>attends<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/university-club-event-ontology#attends</p>
+  <div class="comment">
+   <span class="markdown">Connects a student to an event they attend.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Student" title="http://example.org/university-club-event-ontology#Student">Student</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Event" title="http://example.org/university-club-event-ontology#Event">Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasAnnouncement">
+  <h3>has announcement<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/university-club-event-ontology#hasAnnouncement</p>
+  <div class="comment">
+   <span class="markdown">Connects an event to its announcement text.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Event" title="http://example.org/university-club-event-ontology#Event">Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Announcement" title="http://example.org/university-club-event-ontology#Announcement">Announcement</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasCategory">
+  <h3>has category<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/university-club-event-ontology#hasCategory</p>
+  <div class="comment">
+   <span class="markdown">Connects an event to its category.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Event" title="http://example.org/university-club-event-ontology#Event">Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#EventCategory" title="http://example.org/university-club-event-ontology#EventCategory">Event Category</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasInterest">
+  <h3>has interest<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/university-club-event-ontology#hasInterest</p>
+  <div class="comment">
+   <span class="markdown">Connects a student to an interest area.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Student" title="http://example.org/university-club-event-ontology#Student">Student</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Interest" title="http://example.org/university-club-event-ontology#Interest">Interest</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasLocation">
+  <h3>has location<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/university-club-event-ontology#hasLocation</p>
+  <div class="comment">
+   <span class="markdown">Connects an event to its location.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Event" title="http://example.org/university-club-event-ontology#Event">Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Location" title="http://example.org/university-club-event-ontology#Location">Location</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasOrganizer">
+  <h3>has organizer<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/university-club-event-ontology#hasOrganizer</p>
+  <div class="comment">
+   <span class="markdown">Connects an event to its organizer.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Event" title="http://example.org/university-club-event-ontology#Event">Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Organizer" title="http://example.org/university-club-event-ontology#Organizer">Organizer</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasRole">
+  <h3>has role<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/university-club-event-ontology#hasRole</p>
+  <div class="comment">
+   <span class="markdown">Connects a student to a role in a club or event.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Student" title="http://example.org/university-club-event-ontology#Student">Student</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Role" title="http://example.org/university-club-event-ontology#Role">Role</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="matchesInterest">
+  <h3>matches interest<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/university-club-event-ontology#matchesInterest</p>
+  <div class="comment">
+   <span class="markdown">Connects an event to an interest area that it matches.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Event" title="http://example.org/university-club-event-ontology#Event">Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Interest" title="http://example.org/university-club-event-ontology#Interest">Interest</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="memberOf">
+  <h3>member of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/university-club-event-ontology#memberOf</p>
+  <div class="comment">
+   <span class="markdown">Connects a student to a club they are a member of.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Student" title="http://example.org/university-club-event-ontology#Student">Student</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Club" title="http://example.org/university-club-event-ontology#Club">Club</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="organizes">
+  <h3>organizes<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/university-club-event-ontology#organizes</p>
+  <div class="comment">
+   <span class="markdown">Connects a club to an event it organizes.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Club" title="http://example.org/university-club-event-ontology#Club">Club</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Event" title="http://example.org/university-club-event-ontology#Event">Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="recommendedFor">
+  <h3>recommended for<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/university-club-event-ontology#recommendedFor</p>
+  <div class="comment">
+   <span class="markdown">Connects a recommendation to the student who receives it.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Recommendation" title="http://example.org/university-club-event-ontology#Recommendation">Recommendation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Student" title="http://example.org/university-club-event-ontology#Student">Student</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="recommendsEvent">
+  <h3>recommends event<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/university-club-event-ontology#recommendsEvent</p>
+  <div class="comment">
+   <span class="markdown">Connects a recommendation to a suggested event.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Recommendation" title="http://example.org/university-club-event-ontology#Recommendation">Recommendation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Event" title="http://example.org/university-club-event-ontology#Event">Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+ <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+ <ul class="hlist">
+  <li><a href="#announcementText" title="http://example.org/university-club-event-ontology#announcementText">announcement text</a></li>
+  <li><a href="#attendanceStatus" title="http://example.org/university-club-event-ontology#attendanceStatus">attendance status</a></li>
+  <li><a href="#clubName" title="http://example.org/university-club-event-ontology#clubName">club name</a></li>
+  <li><a href="#eventDate" title="http://example.org/university-club-event-ontology#eventDate">event date</a></li>
+  <li><a href="#eventTitle" title="http://example.org/university-club-event-ontology#eventTitle">event title</a></li>
+  <li><a href="#interestName" title="http://example.org/university-club-event-ontology#interestName">interest name</a></li>
+  <li><a href="#questionText" title="http://example.org/university-club-event-ontology#questionText">question text</a></li>
+  <li><a href="#roleName" title="http://example.org/university-club-event-ontology#roleName">role name</a></li>
+  <li><a href="#studentId" title="http://example.org/university-club-event-ontology#studentId">student ID</a></li>
+ </ul>
+ <div class="entity" id="announcementText">
+  <h3>announcement text<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/university-club-event-ontology#announcementText</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Announcement" title="http://example.org/university-club-event-ontology#Announcement">Announcement</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="attendanceStatus">
+  <h3>attendance status<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/university-club-event-ontology#attendanceStatus</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Attendance" title="http://example.org/university-club-event-ontology#Attendance">Attendance</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="clubName">
+  <h3>club name<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/university-club-event-ontology#clubName</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Club" title="http://example.org/university-club-event-ontology#Club">Club</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="eventDate">
+  <h3>event date<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/university-club-event-ontology#eventDate</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Event" title="http://example.org/university-club-event-ontology#Event">Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#date" target="_blank" title="http://www.w3.org/2001/XMLSchema#date">date</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="eventTitle">
+  <h3>event title<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/university-club-event-ontology#eventTitle</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Event" title="http://example.org/university-club-event-ontology#Event">Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="interestName">
+  <h3>interest name<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/university-club-event-ontology#interestName</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Interest" title="http://example.org/university-club-event-ontology#Interest">Interest</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="questionText">
+  <h3>question text<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/university-club-event-ontology#questionText</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#SemanticQuestion" title="http://example.org/university-club-event-ontology#SemanticQuestion">Semantic Question</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="roleName">
+  <h3>role name<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/university-club-event-ontology#roleName</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Role" title="http://example.org/university-club-event-ontology#Role">Role</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="studentId">
+  <h3>student ID<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/university-club-event-ontology#studentId</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Student" title="http://example.org/university-club-event-ontology#Student">Student</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+ <h3 id="namedindividuals" class="list">Named Individuals</h3>
+ <ul class="hlist">
+  <li><a href="#AIWorkshopAnnouncement" title="http://example.org/university-club-event-ontology#AIWorkshopAnnouncement"> <span>A I Workshop Announcement</span> </a></li>
+  <li><a href="#AIWorkshop2026" title="http://example.org/university-club-event-ontology#AIWorkshop2026"> <span>A I Workshop2026</span> </a></li>
+  <li><a href="#ArdaStudent" title="http://example.org/university-club-event-ontology#ArdaStudent"> <span>Arda Student</span> </a></li>
+  <li><a href="#ArtificialIntelligence" title="http://example.org/university-club-event-ontology#ArtificialIntelligence"> <span>Artificial Intelligence</span> </a></li>
+  <li><a href="#ClubMember" title="http://example.org/university-club-event-ontology#ClubMember"> <span>Club Member</span> </a></li>
+  <li><a href="#ComputerScienceClub" title="http://example.org/university-club-event-ontology#ComputerScienceClub"> <span>Computer Science Club</span> </a></li>
+  <li><a href="#Question1" title="http://example.org/university-club-event-ontology#Question1"> <span>Question1</span> </a></li>
+  <li><a href="#Question2" title="http://example.org/university-club-event-ontology#Question2"> <span>Question2</span> </a></li>
+  <li><a href="#RecommendationForArda" title="http://example.org/university-club-event-ontology#RecommendationForArda"> <span>Recommendation For Arda</span> </a></li>
+  <li><a href="#RoomA101" title="http://example.org/university-club-event-ontology#RoomA101">Room A101</a></li>
+  <li><a href="#TechnologyCategory" title="http://example.org/university-club-event-ontology#TechnologyCategory">Technology Event</a></li>
+ </ul>
+ <div class="entity" id="AIWorkshopAnnouncement">
+  <h3>A I Workshop Announcement<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/university-club-event-ontology#AIWorkshopAnnouncement</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Announcement" title="http://example.org/university-club-event-ontology#Announcement">Announcement</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#announcementText" title="http://example.org/university-club-event-ontology#announcementText">announcement text</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Computer Science Club organizes an AI Workshop for students interested in artificial intelligence and software development."</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="AIWorkshop2026">
+  <h3>A I Workshop2026<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/university-club-event-ontology#AIWorkshop2026</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Event" title="http://example.org/university-club-event-ontology#Event">Event</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#hasAnnouncement" title="http://example.org/university-club-event-ontology#hasAnnouncement">has announcement</a> <sup class="type-op" title="object property">op</sup> <a href="#AIWorkshopAnnouncement" title="http://example.org/university-club-event-ontology#AIWorkshopAnnouncement">A I Workshop Announcement</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hasCategory" title="http://example.org/university-club-event-ontology#hasCategory">has category</a> <sup class="type-op" title="object property">op</sup> <a href="#TechnologyCategory" title="http://example.org/university-club-event-ontology#TechnologyCategory">Technology Event</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hasLocation" title="http://example.org/university-club-event-ontology#hasLocation">has location</a> <sup class="type-op" title="object property">op</sup> <a href="#RoomA101" title="http://example.org/university-club-event-ontology#RoomA101">Room A101</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#matchesInterest" title="http://example.org/university-club-event-ontology#matchesInterest">matches interest</a> <sup class="type-op" title="object property">op</sup> <a href="#ArtificialIntelligence" title="http://example.org/university-club-event-ontology#ArtificialIntelligence">Artificial Intelligence</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#eventDate" title="http://example.org/university-club-event-ontology#eventDate">event date</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"2026-05-10"^^<a href="http://www.w3.org/2001/XMLSchema#date" target="_blank" title="http://www.w3.org/2001/XMLSchema#date">date</a> </span>
+   </dd>
+   <dd>
+    <a href="#eventTitle" title="http://example.org/university-club-event-ontology#eventTitle">event title</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"AI Workshop 2026"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ArdaStudent">
+  <h3>Arda Student<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/university-club-event-ontology#ArdaStudent</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Student" title="http://example.org/university-club-event-ontology#Student">Student</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#attends" title="http://example.org/university-club-event-ontology#attends">attends</a> <sup class="type-op" title="object property">op</sup> <a href="#AIWorkshop2026" title="http://example.org/university-club-event-ontology#AIWorkshop2026">A I Workshop2026</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hasInterest" title="http://example.org/university-club-event-ontology#hasInterest">has interest</a> <sup class="type-op" title="object property">op</sup> <a href="#ArtificialIntelligence" title="http://example.org/university-club-event-ontology#ArtificialIntelligence">Artificial Intelligence</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hasRole" title="http://example.org/university-club-event-ontology#hasRole">has role</a> <sup class="type-op" title="object property">op</sup> <a href="#ClubMember" title="http://example.org/university-club-event-ontology#ClubMember">Club Member</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#memberOf" title="http://example.org/university-club-event-ontology#memberOf">member of</a> <sup class="type-op" title="object property">op</sup> <a href="#ComputerScienceClub" title="http://example.org/university-club-event-ontology#ComputerScienceClub">Computer Science Club</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#studentId" title="http://example.org/university-club-event-ontology#studentId">student ID</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"2026001"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ArtificialIntelligence">
+  <h3>Artificial Intelligence<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/university-club-event-ontology#ArtificialIntelligence</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Interest" title="http://example.org/university-club-event-ontology#Interest">Interest</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#interestName" title="http://example.org/university-club-event-ontology#interestName">interest name</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Artificial Intelligence"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ClubMember">
+  <h3>Club Member<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/university-club-event-ontology#ClubMember</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Role" title="http://example.org/university-club-event-ontology#Role">Role</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#roleName" title="http://example.org/university-club-event-ontology#roleName">role name</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Club Member"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ComputerScienceClub">
+  <h3>Computer Science Club<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/university-club-event-ontology#ComputerScienceClub</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Club" title="http://example.org/university-club-event-ontology#Club">Club</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#organizes" title="http://example.org/university-club-event-ontology#organizes">organizes</a> <sup class="type-op" title="object property">op</sup> <a href="#AIWorkshop2026" title="http://example.org/university-club-event-ontology#AIWorkshop2026">A I Workshop2026</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#clubName" title="http://example.org/university-club-event-ontology#clubName">club name</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Computer Science Club"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Question1">
+  <h3>Question1<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/university-club-event-ontology#Question1</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#SemanticQuestion" title="http://example.org/university-club-event-ontology#SemanticQuestion">Semantic Question</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#questionText" title="http://example.org/university-club-event-ontology#questionText">question text</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Which events are organized by the Computer Science Club?"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Question2">
+  <h3>Question2<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/university-club-event-ontology#Question2</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#SemanticQuestion" title="http://example.org/university-club-event-ontology#SemanticQuestion">Semantic Question</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#questionText" title="http://example.org/university-club-event-ontology#questionText">question text</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Which events match the student's artificial intelligence interest?"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="RecommendationForArda">
+  <h3>Recommendation For Arda<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/university-club-event-ontology#RecommendationForArda</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Recommendation" title="http://example.org/university-club-event-ontology#Recommendation">Recommendation</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#recommendedFor" title="http://example.org/university-club-event-ontology#recommendedFor">recommended for</a> <sup class="type-op" title="object property">op</sup> <a href="#ArdaStudent" title="http://example.org/university-club-event-ontology#ArdaStudent">Arda Student</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#recommendsEvent" title="http://example.org/university-club-event-ontology#recommendsEvent">recommends event</a> <sup class="type-op" title="object property">op</sup> <a href="#AIWorkshop2026" title="http://example.org/university-club-event-ontology#AIWorkshop2026">A I Workshop2026</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="RoomA101">
+  <h3>Room A101<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/university-club-event-ontology#RoomA101</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Location" title="http://example.org/university-club-event-ontology#Location">Location</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TechnologyCategory">
+  <h3>Technology Event<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/university-club-event-ontology#TechnologyCategory</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#EventCategory" title="http://example.org/university-club-event-ontology#EventCategory">Event Category</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals <br/>
+</div>
+</div>

@@ -1,0 +1,334 @@
+<http://example.org/university-club-event-ontology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://example.org/university-club-event-ontology> <http://www.w3.org/2000/01/rdf-schema#comment> "Version 2 of an ontology for representing university clubs, students, events, memberships, attendance records, announcements, interests, roles, and semantic question answering support."@en .
+<http://example.org/university-club-event-ontology> <http://www.w3.org/2000/01/rdf-schema#label> "University Club and Event Management Ontology"@en .
+<http://example.org/university-club-event-ontology> <http://www.w3.org/2002/07/owl#versionInfo> "2.0" .
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://example.org/university-club-event-ontology#attends
+<http://example.org/university-club-event-ontology#attends> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/university-club-event-ontology#attends> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/university-club-event-ontology#Student> .
+<http://example.org/university-club-event-ontology#attends> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/university-club-event-ontology#Event> .
+<http://example.org/university-club-event-ontology#attends> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects a student to an event they attend."@en .
+<http://example.org/university-club-event-ontology#attends> <http://www.w3.org/2000/01/rdf-schema#label> "attends"@en .
+# 
+# http://example.org/university-club-event-ontology#hasAnnouncement
+<http://example.org/university-club-event-ontology#hasAnnouncement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/university-club-event-ontology#hasAnnouncement> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/university-club-event-ontology#Event> .
+<http://example.org/university-club-event-ontology#hasAnnouncement> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/university-club-event-ontology#Announcement> .
+<http://example.org/university-club-event-ontology#hasAnnouncement> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects an event to its announcement text."@en .
+<http://example.org/university-club-event-ontology#hasAnnouncement> <http://www.w3.org/2000/01/rdf-schema#label> "has announcement"@en .
+# 
+# http://example.org/university-club-event-ontology#hasCategory
+<http://example.org/university-club-event-ontology#hasCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/university-club-event-ontology#hasCategory> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/university-club-event-ontology#Event> .
+<http://example.org/university-club-event-ontology#hasCategory> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/university-club-event-ontology#EventCategory> .
+<http://example.org/university-club-event-ontology#hasCategory> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects an event to its category."@en .
+<http://example.org/university-club-event-ontology#hasCategory> <http://www.w3.org/2000/01/rdf-schema#label> "has category"@en .
+# 
+# http://example.org/university-club-event-ontology#hasInterest
+<http://example.org/university-club-event-ontology#hasInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/university-club-event-ontology#hasInterest> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/university-club-event-ontology#Student> .
+<http://example.org/university-club-event-ontology#hasInterest> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/university-club-event-ontology#Interest> .
+<http://example.org/university-club-event-ontology#hasInterest> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects a student to an interest area."@en .
+<http://example.org/university-club-event-ontology#hasInterest> <http://www.w3.org/2000/01/rdf-schema#label> "has interest"@en .
+# 
+# http://example.org/university-club-event-ontology#hasLocation
+<http://example.org/university-club-event-ontology#hasLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/university-club-event-ontology#hasLocation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/university-club-event-ontology#Event> .
+<http://example.org/university-club-event-ontology#hasLocation> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/university-club-event-ontology#Location> .
+<http://example.org/university-club-event-ontology#hasLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects an event to its location."@en .
+<http://example.org/university-club-event-ontology#hasLocation> <http://www.w3.org/2000/01/rdf-schema#label> "has location"@en .
+# 
+# http://example.org/university-club-event-ontology#hasOrganizer
+<http://example.org/university-club-event-ontology#hasOrganizer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/university-club-event-ontology#hasOrganizer> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/university-club-event-ontology#Event> .
+<http://example.org/university-club-event-ontology#hasOrganizer> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/university-club-event-ontology#Organizer> .
+<http://example.org/university-club-event-ontology#hasOrganizer> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects an event to its organizer."@en .
+<http://example.org/university-club-event-ontology#hasOrganizer> <http://www.w3.org/2000/01/rdf-schema#label> "has organizer"@en .
+# 
+# http://example.org/university-club-event-ontology#hasRole
+<http://example.org/university-club-event-ontology#hasRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/university-club-event-ontology#hasRole> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/university-club-event-ontology#Student> .
+<http://example.org/university-club-event-ontology#hasRole> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/university-club-event-ontology#Role> .
+<http://example.org/university-club-event-ontology#hasRole> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects a student to a role in a club or event."@en .
+<http://example.org/university-club-event-ontology#hasRole> <http://www.w3.org/2000/01/rdf-schema#label> "has role"@en .
+# 
+# http://example.org/university-club-event-ontology#matchesInterest
+<http://example.org/university-club-event-ontology#matchesInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/university-club-event-ontology#matchesInterest> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/university-club-event-ontology#Event> .
+<http://example.org/university-club-event-ontology#matchesInterest> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/university-club-event-ontology#Interest> .
+<http://example.org/university-club-event-ontology#matchesInterest> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects an event to an interest area that it matches."@en .
+<http://example.org/university-club-event-ontology#matchesInterest> <http://www.w3.org/2000/01/rdf-schema#label> "matches interest"@en .
+# 
+# http://example.org/university-club-event-ontology#memberOf
+<http://example.org/university-club-event-ontology#memberOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/university-club-event-ontology#memberOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/university-club-event-ontology#Student> .
+<http://example.org/university-club-event-ontology#memberOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/university-club-event-ontology#Club> .
+<http://example.org/university-club-event-ontology#memberOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects a student to a club they are a member of."@en .
+<http://example.org/university-club-event-ontology#memberOf> <http://www.w3.org/2000/01/rdf-schema#label> "member of"@en .
+# 
+# http://example.org/university-club-event-ontology#organizes
+<http://example.org/university-club-event-ontology#organizes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/university-club-event-ontology#organizes> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/university-club-event-ontology#Club> .
+<http://example.org/university-club-event-ontology#organizes> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/university-club-event-ontology#Event> .
+<http://example.org/university-club-event-ontology#organizes> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects a club to an event it organizes."@en .
+<http://example.org/university-club-event-ontology#organizes> <http://www.w3.org/2000/01/rdf-schema#label> "organizes"@en .
+# 
+# http://example.org/university-club-event-ontology#recommendedFor
+<http://example.org/university-club-event-ontology#recommendedFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/university-club-event-ontology#recommendedFor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/university-club-event-ontology#Recommendation> .
+<http://example.org/university-club-event-ontology#recommendedFor> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/university-club-event-ontology#Student> .
+<http://example.org/university-club-event-ontology#recommendedFor> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects a recommendation to the student who receives it."@en .
+<http://example.org/university-club-event-ontology#recommendedFor> <http://www.w3.org/2000/01/rdf-schema#label> "recommended for"@en .
+# 
+# http://example.org/university-club-event-ontology#recommendsEvent
+<http://example.org/university-club-event-ontology#recommendsEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/university-club-event-ontology#recommendsEvent> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/university-club-event-ontology#Recommendation> .
+<http://example.org/university-club-event-ontology#recommendsEvent> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/university-club-event-ontology#Event> .
+<http://example.org/university-club-event-ontology#recommendsEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects a recommendation to a suggested event."@en .
+<http://example.org/university-club-event-ontology#recommendsEvent> <http://www.w3.org/2000/01/rdf-schema#label> "recommends event"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://example.org/university-club-event-ontology#announcementText
+<http://example.org/university-club-event-ontology#announcementText> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/university-club-event-ontology#announcementText> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/university-club-event-ontology#Announcement> .
+<http://example.org/university-club-event-ontology#announcementText> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/university-club-event-ontology#announcementText> <http://www.w3.org/2000/01/rdf-schema#label> "announcement text"@en .
+# 
+# http://example.org/university-club-event-ontology#attendanceStatus
+<http://example.org/university-club-event-ontology#attendanceStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/university-club-event-ontology#attendanceStatus> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/university-club-event-ontology#Attendance> .
+<http://example.org/university-club-event-ontology#attendanceStatus> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/university-club-event-ontology#attendanceStatus> <http://www.w3.org/2000/01/rdf-schema#label> "attendance status"@en .
+# 
+# http://example.org/university-club-event-ontology#clubName
+<http://example.org/university-club-event-ontology#clubName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/university-club-event-ontology#clubName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/university-club-event-ontology#Club> .
+<http://example.org/university-club-event-ontology#clubName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/university-club-event-ontology#clubName> <http://www.w3.org/2000/01/rdf-schema#label> "club name"@en .
+# 
+# http://example.org/university-club-event-ontology#eventDate
+<http://example.org/university-club-event-ontology#eventDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/university-club-event-ontology#eventDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/university-club-event-ontology#Event> .
+<http://example.org/university-club-event-ontology#eventDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://example.org/university-club-event-ontology#eventDate> <http://www.w3.org/2000/01/rdf-schema#label> "event date"@en .
+# 
+# http://example.org/university-club-event-ontology#eventTitle
+<http://example.org/university-club-event-ontology#eventTitle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/university-club-event-ontology#eventTitle> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/university-club-event-ontology#Event> .
+<http://example.org/university-club-event-ontology#eventTitle> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/university-club-event-ontology#eventTitle> <http://www.w3.org/2000/01/rdf-schema#label> "event title"@en .
+# 
+# http://example.org/university-club-event-ontology#interestName
+<http://example.org/university-club-event-ontology#interestName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/university-club-event-ontology#interestName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/university-club-event-ontology#Interest> .
+<http://example.org/university-club-event-ontology#interestName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/university-club-event-ontology#interestName> <http://www.w3.org/2000/01/rdf-schema#label> "interest name"@en .
+# 
+# http://example.org/university-club-event-ontology#questionText
+<http://example.org/university-club-event-ontology#questionText> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/university-club-event-ontology#questionText> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/university-club-event-ontology#SemanticQuestion> .
+<http://example.org/university-club-event-ontology#questionText> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/university-club-event-ontology#questionText> <http://www.w3.org/2000/01/rdf-schema#label> "question text"@en .
+# 
+# http://example.org/university-club-event-ontology#roleName
+<http://example.org/university-club-event-ontology#roleName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/university-club-event-ontology#roleName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/university-club-event-ontology#Role> .
+<http://example.org/university-club-event-ontology#roleName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/university-club-event-ontology#roleName> <http://www.w3.org/2000/01/rdf-schema#label> "role name"@en .
+# 
+# http://example.org/university-club-event-ontology#studentId
+<http://example.org/university-club-event-ontology#studentId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/university-club-event-ontology#studentId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/university-club-event-ontology#Student> .
+<http://example.org/university-club-event-ontology#studentId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/university-club-event-ontology#studentId> <http://www.w3.org/2000/01/rdf-schema#label> "student ID"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://example.org/university-club-event-ontology#Announcement
+<http://example.org/university-club-event-ontology#Announcement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/university-club-event-ontology#Announcement> <http://www.w3.org/2000/01/rdf-schema#comment> "A text-based announcement describing a club, event, or activity."@en .
+<http://example.org/university-club-event-ontology#Announcement> <http://www.w3.org/2000/01/rdf-schema#label> "Announcement"@en .
+# 
+# http://example.org/university-club-event-ontology#Attendance
+<http://example.org/university-club-event-ontology#Attendance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/university-club-event-ontology#Attendance> <http://www.w3.org/2000/01/rdf-schema#comment> "A record showing that a student attended an event."@en .
+<http://example.org/university-club-event-ontology#Attendance> <http://www.w3.org/2000/01/rdf-schema#label> "Attendance"@en .
+# 
+# http://example.org/university-club-event-ontology#Club
+<http://example.org/university-club-event-ontology#Club> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/university-club-event-ontology#Club> <http://www.w3.org/2000/01/rdf-schema#comment> "A student organization within a university."@en .
+<http://example.org/university-club-event-ontology#Club> <http://www.w3.org/2000/01/rdf-schema#label> "Club"@en .
+# 
+# http://example.org/university-club-event-ontology#Event
+<http://example.org/university-club-event-ontology#Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/university-club-event-ontology#Event> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Event> .
+<http://schema.org/Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/university-club-event-ontology#Event> <http://www.w3.org/2000/01/rdf-schema#comment> "An activity organized by a university club."@en .
+<http://example.org/university-club-event-ontology#Event> <http://www.w3.org/2000/01/rdf-schema#label> "Event"@en .
+# 
+# http://example.org/university-club-event-ontology#EventCategory
+<http://example.org/university-club-event-ontology#EventCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/university-club-event-ontology#EventCategory> <http://www.w3.org/2000/01/rdf-schema#comment> "A category describing the topic or type of an event."@en .
+<http://example.org/university-club-event-ontology#EventCategory> <http://www.w3.org/2000/01/rdf-schema#label> "Event Category"@en .
+# 
+# http://example.org/university-club-event-ontology#Interest
+<http://example.org/university-club-event-ontology#Interest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/university-club-event-ontology#Interest> <http://www.w3.org/2000/01/rdf-schema#comment> "A student's area of interest, such as artificial intelligence, software development, music, or sports."@en .
+<http://example.org/university-club-event-ontology#Interest> <http://www.w3.org/2000/01/rdf-schema#label> "Interest"@en .
+# 
+# http://example.org/university-club-event-ontology#Location
+<http://example.org/university-club-event-ontology#Location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/university-club-event-ontology#Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Place> .
+<http://schema.org/Place> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/university-club-event-ontology#Location> <http://www.w3.org/2000/01/rdf-schema#comment> "A physical or virtual place where an event is held."@en .
+<http://example.org/university-club-event-ontology#Location> <http://www.w3.org/2000/01/rdf-schema#label> "Location"@en .
+# 
+# http://example.org/university-club-event-ontology#Membership
+<http://example.org/university-club-event-ontology#Membership> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/university-club-event-ontology#Membership> <http://www.w3.org/2000/01/rdf-schema#comment> "A relationship representing a student's membership in a club."@en .
+<http://example.org/university-club-event-ontology#Membership> <http://www.w3.org/2000/01/rdf-schema#label> "Membership"@en .
+# 
+# http://example.org/university-club-event-ontology#Organizer
+<http://example.org/university-club-event-ontology#Organizer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/university-club-event-ontology#Organizer> <http://www.w3.org/2000/01/rdf-schema#comment> "A person or club responsible for organizing an event."@en .
+<http://example.org/university-club-event-ontology#Organizer> <http://www.w3.org/2000/01/rdf-schema#label> "Organizer"@en .
+# 
+# http://example.org/university-club-event-ontology#Recommendation
+<http://example.org/university-club-event-ontology#Recommendation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/university-club-event-ontology#Recommendation> <http://www.w3.org/2000/01/rdf-schema#comment> "A suggested club or event generated according to student interests, memberships, or participation history."@en .
+<http://example.org/university-club-event-ontology#Recommendation> <http://www.w3.org/2000/01/rdf-schema#label> "Recommendation"@en .
+# 
+# http://example.org/university-club-event-ontology#Role
+<http://example.org/university-club-event-ontology#Role> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/university-club-event-ontology#Role> <http://www.w3.org/2000/01/rdf-schema#comment> "A role assigned to a student in a club or event, such as member, president, organizer, or participant."@en .
+<http://example.org/university-club-event-ontology#Role> <http://www.w3.org/2000/01/rdf-schema#label> "Role"@en .
+# 
+# http://example.org/university-club-event-ontology#SemanticQuestion
+<http://example.org/university-club-event-ontology#SemanticQuestion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/university-club-event-ontology#SemanticQuestion> <http://www.w3.org/2000/01/rdf-schema#comment> "A natural language question that can be answered using ontology concepts and relationships."@en .
+<http://example.org/university-club-event-ontology#SemanticQuestion> <http://www.w3.org/2000/01/rdf-schema#label> "Semantic Question"@en .
+# 
+# http://example.org/university-club-event-ontology#Student
+<http://example.org/university-club-event-ontology#Student> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/university-club-event-ontology#Student> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Person> .
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/university-club-event-ontology#Student> <http://www.w3.org/2000/01/rdf-schema#comment> "A university student who may join clubs, attend events, and have interests."@en .
+<http://example.org/university-club-event-ontology#Student> <http://www.w3.org/2000/01/rdf-schema#label> "Student"@en .
+# 
+# http://schema.org/Event
+# 
+# http://schema.org/Place
+# 
+# http://xmlns.com/foaf/0.1/Person
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://example.org/university-club-event-ontology#AIWorkshop2026
+<http://example.org/university-club-event-ontology#AIWorkshop2026> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/university-club-event-ontology#AIWorkshop2026> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/university-club-event-ontology#Event> .
+<http://example.org/university-club-event-ontology#AIWorkshop2026> <http://example.org/university-club-event-ontology#hasAnnouncement> <http://example.org/university-club-event-ontology#AIWorkshopAnnouncement> .
+<http://example.org/university-club-event-ontology#AIWorkshopAnnouncement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/university-club-event-ontology#AIWorkshop2026> <http://example.org/university-club-event-ontology#hasCategory> <http://example.org/university-club-event-ontology#TechnologyCategory> .
+<http://example.org/university-club-event-ontology#TechnologyCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/university-club-event-ontology#AIWorkshop2026> <http://example.org/university-club-event-ontology#hasLocation> <http://example.org/university-club-event-ontology#RoomA101> .
+<http://example.org/university-club-event-ontology#RoomA101> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/university-club-event-ontology#AIWorkshop2026> <http://example.org/university-club-event-ontology#matchesInterest> <http://example.org/university-club-event-ontology#ArtificialIntelligence> .
+<http://example.org/university-club-event-ontology#ArtificialIntelligence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/university-club-event-ontology#AIWorkshop2026> <http://example.org/university-club-event-ontology#eventDate> "2026-05-10"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://example.org/university-club-event-ontology#AIWorkshop2026> <http://example.org/university-club-event-ontology#eventTitle> "AI Workshop 2026" .
+# 
+# http://example.org/university-club-event-ontology#AIWorkshopAnnouncement
+<http://example.org/university-club-event-ontology#AIWorkshopAnnouncement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/university-club-event-ontology#Announcement> .
+<http://example.org/university-club-event-ontology#AIWorkshopAnnouncement> <http://example.org/university-club-event-ontology#announcementText> "Computer Science Club organizes an AI Workshop for students interested in artificial intelligence and software development." .
+# 
+# http://example.org/university-club-event-ontology#ArdaStudent
+<http://example.org/university-club-event-ontology#ArdaStudent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/university-club-event-ontology#ArdaStudent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/university-club-event-ontology#Student> .
+<http://example.org/university-club-event-ontology#ArdaStudent> <http://example.org/university-club-event-ontology#attends> <http://example.org/university-club-event-ontology#AIWorkshop2026> .
+<http://example.org/university-club-event-ontology#ArdaStudent> <http://example.org/university-club-event-ontology#hasInterest> <http://example.org/university-club-event-ontology#ArtificialIntelligence> .
+<http://example.org/university-club-event-ontology#ArdaStudent> <http://example.org/university-club-event-ontology#hasRole> <http://example.org/university-club-event-ontology#ClubMember> .
+<http://example.org/university-club-event-ontology#ClubMember> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/university-club-event-ontology#ArdaStudent> <http://example.org/university-club-event-ontology#memberOf> <http://example.org/university-club-event-ontology#ComputerScienceClub> .
+<http://example.org/university-club-event-ontology#ComputerScienceClub> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/university-club-event-ontology#ArdaStudent> <http://example.org/university-club-event-ontology#studentId> "2026001" .
+# 
+# http://example.org/university-club-event-ontology#ArtificialIntelligence
+<http://example.org/university-club-event-ontology#ArtificialIntelligence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/university-club-event-ontology#Interest> .
+<http://example.org/university-club-event-ontology#ArtificialIntelligence> <http://example.org/university-club-event-ontology#interestName> "Artificial Intelligence" .
+# 
+# http://example.org/university-club-event-ontology#ClubMember
+<http://example.org/university-club-event-ontology#ClubMember> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/university-club-event-ontology#Role> .
+<http://example.org/university-club-event-ontology#ClubMember> <http://example.org/university-club-event-ontology#roleName> "Club Member" .
+# 
+# http://example.org/university-club-event-ontology#ComputerScienceClub
+<http://example.org/university-club-event-ontology#ComputerScienceClub> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/university-club-event-ontology#Club> .
+<http://example.org/university-club-event-ontology#ComputerScienceClub> <http://example.org/university-club-event-ontology#organizes> <http://example.org/university-club-event-ontology#AIWorkshop2026> .
+<http://example.org/university-club-event-ontology#ComputerScienceClub> <http://example.org/university-club-event-ontology#clubName> "Computer Science Club" .
+# 
+# http://example.org/university-club-event-ontology#Question1
+<http://example.org/university-club-event-ontology#Question1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/university-club-event-ontology#Question1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/university-club-event-ontology#SemanticQuestion> .
+<http://example.org/university-club-event-ontology#Question1> <http://example.org/university-club-event-ontology#questionText> "Which events are organized by the Computer Science Club?" .
+# 
+# http://example.org/university-club-event-ontology#Question2
+<http://example.org/university-club-event-ontology#Question2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/university-club-event-ontology#Question2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/university-club-event-ontology#SemanticQuestion> .
+<http://example.org/university-club-event-ontology#Question2> <http://example.org/university-club-event-ontology#questionText> "Which events match the student's artificial intelligence interest?" .
+# 
+# http://example.org/university-club-event-ontology#RecommendationForArda
+<http://example.org/university-club-event-ontology#RecommendationForArda> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/university-club-event-ontology#RecommendationForArda> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/university-club-event-ontology#Recommendation> .
+<http://example.org/university-club-event-ontology#RecommendationForArda> <http://example.org/university-club-event-ontology#recommendedFor> <http://example.org/university-club-event-ontology#ArdaStudent> .
+<http://example.org/university-club-event-ontology#RecommendationForArda> <http://example.org/university-club-event-ontology#recommendsEvent> <http://example.org/university-club-event-ontology#AIWorkshop2026> .
+# 
+# http://example.org/university-club-event-ontology#RoomA101
+<http://example.org/university-club-event-ontology#RoomA101> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/university-club-event-ontology#Location> .
+<http://example.org/university-club-event-ontology#RoomA101> <http://www.w3.org/2000/01/rdf-schema#label> "Room A101"@en .
+# 
+# http://example.org/university-club-event-ontology#TechnologyCategory
+<http://example.org/university-club-event-ontology#TechnologyCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/university-club-event-ontology#EventCategory> .
+<http://example.org/university-club-event-ontology#TechnologyCategory> <http://www.w3.org/2000/01/rdf-schema#label> "Technology Event"@en .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

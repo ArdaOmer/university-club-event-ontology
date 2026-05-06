@@ -1,0 +1,606 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://example.org/university-club-event-ontology#"
+     xml:base="http://example.org/university-club-event-ontology"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:university-club-event-ontology="http://example.org/university-club-event-ontology#">
+    <owl:Ontology rdf:about="http://example.org/university-club-event-ontology">
+        <rdfs:comment xml:lang="en">Version 2 of an ontology for representing university clubs, students, events, memberships, attendance records, announcements, interests, roles, and semantic question answering support.</rdfs:comment>
+        <rdfs:label xml:lang="en">University Club and Event Management Ontology</rdfs:label>
+        <owl:versionInfo>2.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://example.org/university-club-event-ontology#attends -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/university-club-event-ontology#attends">
+        <rdfs:domain rdf:resource="http://example.org/university-club-event-ontology#Student"/>
+        <rdfs:range rdf:resource="http://example.org/university-club-event-ontology#Event"/>
+        <rdfs:comment xml:lang="en">Connects a student to an event they attend.</rdfs:comment>
+        <rdfs:label xml:lang="en">attends</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/university-club-event-ontology#hasAnnouncement -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/university-club-event-ontology#hasAnnouncement">
+        <rdfs:domain rdf:resource="http://example.org/university-club-event-ontology#Event"/>
+        <rdfs:range rdf:resource="http://example.org/university-club-event-ontology#Announcement"/>
+        <rdfs:comment xml:lang="en">Connects an event to its announcement text.</rdfs:comment>
+        <rdfs:label xml:lang="en">has announcement</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/university-club-event-ontology#hasCategory -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/university-club-event-ontology#hasCategory">
+        <rdfs:domain rdf:resource="http://example.org/university-club-event-ontology#Event"/>
+        <rdfs:range rdf:resource="http://example.org/university-club-event-ontology#EventCategory"/>
+        <rdfs:comment xml:lang="en">Connects an event to its category.</rdfs:comment>
+        <rdfs:label xml:lang="en">has category</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/university-club-event-ontology#hasInterest -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/university-club-event-ontology#hasInterest">
+        <rdfs:domain rdf:resource="http://example.org/university-club-event-ontology#Student"/>
+        <rdfs:range rdf:resource="http://example.org/university-club-event-ontology#Interest"/>
+        <rdfs:comment xml:lang="en">Connects a student to an interest area.</rdfs:comment>
+        <rdfs:label xml:lang="en">has interest</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/university-club-event-ontology#hasLocation -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/university-club-event-ontology#hasLocation">
+        <rdfs:domain rdf:resource="http://example.org/university-club-event-ontology#Event"/>
+        <rdfs:range rdf:resource="http://example.org/university-club-event-ontology#Location"/>
+        <rdfs:comment xml:lang="en">Connects an event to its location.</rdfs:comment>
+        <rdfs:label xml:lang="en">has location</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/university-club-event-ontology#hasOrganizer -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/university-club-event-ontology#hasOrganizer">
+        <rdfs:domain rdf:resource="http://example.org/university-club-event-ontology#Event"/>
+        <rdfs:range rdf:resource="http://example.org/university-club-event-ontology#Organizer"/>
+        <rdfs:comment xml:lang="en">Connects an event to its organizer.</rdfs:comment>
+        <rdfs:label xml:lang="en">has organizer</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/university-club-event-ontology#hasRole -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/university-club-event-ontology#hasRole">
+        <rdfs:domain rdf:resource="http://example.org/university-club-event-ontology#Student"/>
+        <rdfs:range rdf:resource="http://example.org/university-club-event-ontology#Role"/>
+        <rdfs:comment xml:lang="en">Connects a student to a role in a club or event.</rdfs:comment>
+        <rdfs:label xml:lang="en">has role</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/university-club-event-ontology#matchesInterest -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/university-club-event-ontology#matchesInterest">
+        <rdfs:domain rdf:resource="http://example.org/university-club-event-ontology#Event"/>
+        <rdfs:range rdf:resource="http://example.org/university-club-event-ontology#Interest"/>
+        <rdfs:comment xml:lang="en">Connects an event to an interest area that it matches.</rdfs:comment>
+        <rdfs:label xml:lang="en">matches interest</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/university-club-event-ontology#memberOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/university-club-event-ontology#memberOf">
+        <rdfs:domain rdf:resource="http://example.org/university-club-event-ontology#Student"/>
+        <rdfs:range rdf:resource="http://example.org/university-club-event-ontology#Club"/>
+        <rdfs:comment xml:lang="en">Connects a student to a club they are a member of.</rdfs:comment>
+        <rdfs:label xml:lang="en">member of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/university-club-event-ontology#organizes -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/university-club-event-ontology#organizes">
+        <rdfs:domain rdf:resource="http://example.org/university-club-event-ontology#Club"/>
+        <rdfs:range rdf:resource="http://example.org/university-club-event-ontology#Event"/>
+        <rdfs:comment xml:lang="en">Connects a club to an event it organizes.</rdfs:comment>
+        <rdfs:label xml:lang="en">organizes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/university-club-event-ontology#recommendedFor -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/university-club-event-ontology#recommendedFor">
+        <rdfs:domain rdf:resource="http://example.org/university-club-event-ontology#Recommendation"/>
+        <rdfs:range rdf:resource="http://example.org/university-club-event-ontology#Student"/>
+        <rdfs:comment xml:lang="en">Connects a recommendation to the student who receives it.</rdfs:comment>
+        <rdfs:label xml:lang="en">recommended for</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/university-club-event-ontology#recommendsEvent -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/university-club-event-ontology#recommendsEvent">
+        <rdfs:domain rdf:resource="http://example.org/university-club-event-ontology#Recommendation"/>
+        <rdfs:range rdf:resource="http://example.org/university-club-event-ontology#Event"/>
+        <rdfs:comment xml:lang="en">Connects a recommendation to a suggested event.</rdfs:comment>
+        <rdfs:label xml:lang="en">recommends event</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://example.org/university-club-event-ontology#announcementText -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/university-club-event-ontology#announcementText">
+        <rdfs:domain rdf:resource="http://example.org/university-club-event-ontology#Announcement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">announcement text</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/university-club-event-ontology#attendanceStatus -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/university-club-event-ontology#attendanceStatus">
+        <rdfs:domain rdf:resource="http://example.org/university-club-event-ontology#Attendance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">attendance status</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/university-club-event-ontology#clubName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/university-club-event-ontology#clubName">
+        <rdfs:domain rdf:resource="http://example.org/university-club-event-ontology#Club"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">club name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/university-club-event-ontology#eventDate -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/university-club-event-ontology#eventDate">
+        <rdfs:domain rdf:resource="http://example.org/university-club-event-ontology#Event"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:label xml:lang="en">event date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/university-club-event-ontology#eventTitle -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/university-club-event-ontology#eventTitle">
+        <rdfs:domain rdf:resource="http://example.org/university-club-event-ontology#Event"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">event title</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/university-club-event-ontology#interestName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/university-club-event-ontology#interestName">
+        <rdfs:domain rdf:resource="http://example.org/university-club-event-ontology#Interest"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">interest name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/university-club-event-ontology#questionText -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/university-club-event-ontology#questionText">
+        <rdfs:domain rdf:resource="http://example.org/university-club-event-ontology#SemanticQuestion"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">question text</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/university-club-event-ontology#roleName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/university-club-event-ontology#roleName">
+        <rdfs:domain rdf:resource="http://example.org/university-club-event-ontology#Role"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">role name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/university-club-event-ontology#studentId -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/university-club-event-ontology#studentId">
+        <rdfs:domain rdf:resource="http://example.org/university-club-event-ontology#Student"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">student ID</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://example.org/university-club-event-ontology#Announcement -->
+
+
+    <owl:Class rdf:about="http://example.org/university-club-event-ontology#Announcement">
+        <rdfs:comment xml:lang="en">A text-based announcement describing a club, event, or activity.</rdfs:comment>
+        <rdfs:label xml:lang="en">Announcement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/university-club-event-ontology#Attendance -->
+
+
+    <owl:Class rdf:about="http://example.org/university-club-event-ontology#Attendance">
+        <rdfs:comment xml:lang="en">A record showing that a student attended an event.</rdfs:comment>
+        <rdfs:label xml:lang="en">Attendance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/university-club-event-ontology#Club -->
+
+
+    <owl:Class rdf:about="http://example.org/university-club-event-ontology#Club">
+        <rdfs:comment xml:lang="en">A student organization within a university.</rdfs:comment>
+        <rdfs:label xml:lang="en">Club</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/university-club-event-ontology#Event -->
+
+
+    <owl:Class rdf:about="http://example.org/university-club-event-ontology#Event">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Event"/>
+        <rdfs:comment xml:lang="en">An activity organized by a university club.</rdfs:comment>
+        <rdfs:label xml:lang="en">Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/university-club-event-ontology#EventCategory -->
+
+
+    <owl:Class rdf:about="http://example.org/university-club-event-ontology#EventCategory">
+        <rdfs:comment xml:lang="en">A category describing the topic or type of an event.</rdfs:comment>
+        <rdfs:label xml:lang="en">Event Category</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/university-club-event-ontology#Interest -->
+
+
+    <owl:Class rdf:about="http://example.org/university-club-event-ontology#Interest">
+        <rdfs:comment xml:lang="en">A student&apos;s area of interest, such as artificial intelligence, software development, music, or sports.</rdfs:comment>
+        <rdfs:label xml:lang="en">Interest</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/university-club-event-ontology#Location -->
+
+
+    <owl:Class rdf:about="http://example.org/university-club-event-ontology#Location">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Place"/>
+        <rdfs:comment xml:lang="en">A physical or virtual place where an event is held.</rdfs:comment>
+        <rdfs:label xml:lang="en">Location</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/university-club-event-ontology#Membership -->
+
+
+    <owl:Class rdf:about="http://example.org/university-club-event-ontology#Membership">
+        <rdfs:comment xml:lang="en">A relationship representing a student&apos;s membership in a club.</rdfs:comment>
+        <rdfs:label xml:lang="en">Membership</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/university-club-event-ontology#Organizer -->
+
+
+    <owl:Class rdf:about="http://example.org/university-club-event-ontology#Organizer">
+        <rdfs:comment xml:lang="en">A person or club responsible for organizing an event.</rdfs:comment>
+        <rdfs:label xml:lang="en">Organizer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/university-club-event-ontology#Recommendation -->
+
+
+    <owl:Class rdf:about="http://example.org/university-club-event-ontology#Recommendation">
+        <rdfs:comment xml:lang="en">A suggested club or event generated according to student interests, memberships, or participation history.</rdfs:comment>
+        <rdfs:label xml:lang="en">Recommendation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/university-club-event-ontology#Role -->
+
+
+    <owl:Class rdf:about="http://example.org/university-club-event-ontology#Role">
+        <rdfs:comment xml:lang="en">A role assigned to a student in a club or event, such as member, president, organizer, or participant.</rdfs:comment>
+        <rdfs:label xml:lang="en">Role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/university-club-event-ontology#SemanticQuestion -->
+
+
+    <owl:Class rdf:about="http://example.org/university-club-event-ontology#SemanticQuestion">
+        <rdfs:comment xml:lang="en">A natural language question that can be answered using ontology concepts and relationships.</rdfs:comment>
+        <rdfs:label xml:lang="en">Semantic Question</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/university-club-event-ontology#Student -->
+
+
+    <owl:Class rdf:about="http://example.org/university-club-event-ontology#Student">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:comment xml:lang="en">A university student who may join clubs, attend events, and have interests.</rdfs:comment>
+        <rdfs:label xml:lang="en">Student</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Event -->
+
+
+    <owl:Class rdf:about="http://schema.org/Event"/>
+    
+
+
+    <!-- http://schema.org/Place -->
+
+
+    <owl:Class rdf:about="http://schema.org/Place"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Person -->
+
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://example.org/university-club-event-ontology#AIWorkshop2026 -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/university-club-event-ontology#AIWorkshop2026">
+        <rdf:type rdf:resource="http://example.org/university-club-event-ontology#Event"/>
+        <hasAnnouncement rdf:resource="http://example.org/university-club-event-ontology#AIWorkshopAnnouncement"/>
+        <hasCategory rdf:resource="http://example.org/university-club-event-ontology#TechnologyCategory"/>
+        <hasLocation rdf:resource="http://example.org/university-club-event-ontology#RoomA101"/>
+        <matchesInterest rdf:resource="http://example.org/university-club-event-ontology#ArtificialIntelligence"/>
+        <eventDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-05-10</eventDate>
+        <eventTitle>AI Workshop 2026</eventTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/university-club-event-ontology#AIWorkshopAnnouncement -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/university-club-event-ontology#AIWorkshopAnnouncement">
+        <rdf:type rdf:resource="http://example.org/university-club-event-ontology#Announcement"/>
+        <announcementText>Computer Science Club organizes an AI Workshop for students interested in artificial intelligence and software development.</announcementText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/university-club-event-ontology#ArdaStudent -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/university-club-event-ontology#ArdaStudent">
+        <rdf:type rdf:resource="http://example.org/university-club-event-ontology#Student"/>
+        <attends rdf:resource="http://example.org/university-club-event-ontology#AIWorkshop2026"/>
+        <hasInterest rdf:resource="http://example.org/university-club-event-ontology#ArtificialIntelligence"/>
+        <hasRole rdf:resource="http://example.org/university-club-event-ontology#ClubMember"/>
+        <memberOf rdf:resource="http://example.org/university-club-event-ontology#ComputerScienceClub"/>
+        <studentId>2026001</studentId>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/university-club-event-ontology#ArtificialIntelligence -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/university-club-event-ontology#ArtificialIntelligence">
+        <rdf:type rdf:resource="http://example.org/university-club-event-ontology#Interest"/>
+        <interestName>Artificial Intelligence</interestName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/university-club-event-ontology#ClubMember -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/university-club-event-ontology#ClubMember">
+        <rdf:type rdf:resource="http://example.org/university-club-event-ontology#Role"/>
+        <roleName>Club Member</roleName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/university-club-event-ontology#ComputerScienceClub -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/university-club-event-ontology#ComputerScienceClub">
+        <rdf:type rdf:resource="http://example.org/university-club-event-ontology#Club"/>
+        <organizes rdf:resource="http://example.org/university-club-event-ontology#AIWorkshop2026"/>
+        <clubName>Computer Science Club</clubName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/university-club-event-ontology#Question1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/university-club-event-ontology#Question1">
+        <rdf:type rdf:resource="http://example.org/university-club-event-ontology#SemanticQuestion"/>
+        <questionText>Which events are organized by the Computer Science Club?</questionText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/university-club-event-ontology#Question2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/university-club-event-ontology#Question2">
+        <rdf:type rdf:resource="http://example.org/university-club-event-ontology#SemanticQuestion"/>
+        <questionText>Which events match the student&apos;s artificial intelligence interest?</questionText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/university-club-event-ontology#RecommendationForArda -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/university-club-event-ontology#RecommendationForArda">
+        <rdf:type rdf:resource="http://example.org/university-club-event-ontology#Recommendation"/>
+        <recommendedFor rdf:resource="http://example.org/university-club-event-ontology#ArdaStudent"/>
+        <recommendsEvent rdf:resource="http://example.org/university-club-event-ontology#AIWorkshop2026"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/university-club-event-ontology#RoomA101 -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/university-club-event-ontology#RoomA101">
+        <rdf:type rdf:resource="http://example.org/university-club-event-ontology#Location"/>
+        <rdfs:label xml:lang="en">Room A101</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/university-club-event-ontology#TechnologyCategory -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/university-club-event-ontology#TechnologyCategory">
+        <rdf:type rdf:resource="http://example.org/university-club-event-ontology#EventCategory"/>
+        <rdfs:label xml:lang="en">Technology Event</rdfs:label>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

@@ -1,0 +1,635 @@
+[ {
+  "@id" : "http://example.org/university-club-event-ontology",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Version 2 of an ontology for representing university clubs, students, events, memberships, attendance records, announcements, interests, roles, and semantic question answering support."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "University Club and Event Management Ontology"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "2.0"
+  } ]
+}, {
+  "@id" : "http://example.org/university-club-event-ontology#AIWorkshop2026",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://example.org/university-club-event-ontology#eventDate" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2026-05-10"
+  } ],
+  "http://example.org/university-club-event-ontology#eventTitle" : [ {
+    "@value" : "AI Workshop 2026"
+  } ],
+  "http://example.org/university-club-event-ontology#hasAnnouncement" : [ {
+    "@id" : "http://example.org/university-club-event-ontology#AIWorkshopAnnouncement"
+  } ],
+  "http://example.org/university-club-event-ontology#hasCategory" : [ {
+    "@id" : "http://example.org/university-club-event-ontology#TechnologyCategory"
+  } ],
+  "http://example.org/university-club-event-ontology#hasLocation" : [ {
+    "@id" : "http://example.org/university-club-event-ontology#RoomA101"
+  } ],
+  "http://example.org/university-club-event-ontology#matchesInterest" : [ {
+    "@id" : "http://example.org/university-club-event-ontology#ArtificialIntelligence"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/university-club-event-ontology#Event"
+  } ]
+}, {
+  "@id" : "http://example.org/university-club-event-ontology#AIWorkshopAnnouncement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://example.org/university-club-event-ontology#announcementText" : [ {
+    "@value" : "Computer Science Club organizes an AI Workshop for students interested in artificial intelligence and software development."
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/university-club-event-ontology#Announcement"
+  } ]
+}, {
+  "@id" : "http://example.org/university-club-event-ontology#Announcement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A text-based announcement describing a club, event, or activity."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Announcement"
+  } ]
+}, {
+  "@id" : "http://example.org/university-club-event-ontology#ArdaStudent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://example.org/university-club-event-ontology#attends" : [ {
+    "@id" : "http://example.org/university-club-event-ontology#AIWorkshop2026"
+  } ],
+  "http://example.org/university-club-event-ontology#hasInterest" : [ {
+    "@id" : "http://example.org/university-club-event-ontology#ArtificialIntelligence"
+  } ],
+  "http://example.org/university-club-event-ontology#hasRole" : [ {
+    "@id" : "http://example.org/university-club-event-ontology#ClubMember"
+  } ],
+  "http://example.org/university-club-event-ontology#memberOf" : [ {
+    "@id" : "http://example.org/university-club-event-ontology#ComputerScienceClub"
+  } ],
+  "http://example.org/university-club-event-ontology#studentId" : [ {
+    "@value" : "2026001"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/university-club-event-ontology#Student"
+  } ]
+}, {
+  "@id" : "http://example.org/university-club-event-ontology#ArtificialIntelligence",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://example.org/university-club-event-ontology#interestName" : [ {
+    "@value" : "Artificial Intelligence"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/university-club-event-ontology#Interest"
+  } ]
+}, {
+  "@id" : "http://example.org/university-club-event-ontology#Attendance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A record showing that a student attended an event."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Attendance"
+  } ]
+}, {
+  "@id" : "http://example.org/university-club-event-ontology#Club",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A student organization within a university."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Club"
+  } ]
+}, {
+  "@id" : "http://example.org/university-club-event-ontology#ClubMember",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://example.org/university-club-event-ontology#roleName" : [ {
+    "@value" : "Club Member"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/university-club-event-ontology#Role"
+  } ]
+}, {
+  "@id" : "http://example.org/university-club-event-ontology#ComputerScienceClub",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://example.org/university-club-event-ontology#clubName" : [ {
+    "@value" : "Computer Science Club"
+  } ],
+  "http://example.org/university-club-event-ontology#organizes" : [ {
+    "@id" : "http://example.org/university-club-event-ontology#AIWorkshop2026"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/university-club-event-ontology#Club"
+  } ]
+}, {
+  "@id" : "http://example.org/university-club-event-ontology#Event",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An activity organized by a university club."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Event"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://schema.org/Event"
+  } ]
+}, {
+  "@id" : "http://example.org/university-club-event-ontology#EventCategory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A category describing the topic or type of an event."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Event Category"
+  } ]
+}, {
+  "@id" : "http://example.org/university-club-event-ontology#Interest",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A student's area of interest, such as artificial intelligence, software development, music, or sports."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Interest"
+  } ]
+}, {
+  "@id" : "http://example.org/university-club-event-ontology#Location",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A physical or virtual place where an event is held."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Location"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://schema.org/Place"
+  } ]
+}, {
+  "@id" : "http://example.org/university-club-event-ontology#Membership",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A relationship representing a student's membership in a club."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Membership"
+  } ]
+}, {
+  "@id" : "http://example.org/university-club-event-ontology#Organizer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A person or club responsible for organizing an event."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Organizer"
+  } ]
+}, {
+  "@id" : "http://example.org/university-club-event-ontology#Question1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://example.org/university-club-event-ontology#questionText" : [ {
+    "@value" : "Which events are organized by the Computer Science Club?"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/university-club-event-ontology#SemanticQuestion"
+  } ]
+}, {
+  "@id" : "http://example.org/university-club-event-ontology#Question2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://example.org/university-club-event-ontology#questionText" : [ {
+    "@value" : "Which events match the student's artificial intelligence interest?"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/university-club-event-ontology#SemanticQuestion"
+  } ]
+}, {
+  "@id" : "http://example.org/university-club-event-ontology#Recommendation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A suggested club or event generated according to student interests, memberships, or participation history."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Recommendation"
+  } ]
+}, {
+  "@id" : "http://example.org/university-club-event-ontology#RecommendationForArda",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://example.org/university-club-event-ontology#recommendedFor" : [ {
+    "@id" : "http://example.org/university-club-event-ontology#ArdaStudent"
+  } ],
+  "http://example.org/university-club-event-ontology#recommendsEvent" : [ {
+    "@id" : "http://example.org/university-club-event-ontology#AIWorkshop2026"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/university-club-event-ontology#Recommendation"
+  } ]
+}, {
+  "@id" : "http://example.org/university-club-event-ontology#Role",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A role assigned to a student in a club or event, such as member, president, organizer, or participant."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Role"
+  } ]
+}, {
+  "@id" : "http://example.org/university-club-event-ontology#RoomA101",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/university-club-event-ontology#Location"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Room A101"
+  } ]
+}, {
+  "@id" : "http://example.org/university-club-event-ontology#SemanticQuestion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A natural language question that can be answered using ontology concepts and relationships."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Semantic Question"
+  } ]
+}, {
+  "@id" : "http://example.org/university-club-event-ontology#Student",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A university student who may join clubs, attend events, and have interests."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Student"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Person"
+  } ]
+}, {
+  "@id" : "http://example.org/university-club-event-ontology#TechnologyCategory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/university-club-event-ontology#EventCategory"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Technology Event"
+  } ]
+}, {
+  "@id" : "http://example.org/university-club-event-ontology#announcementText",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/university-club-event-ontology#Announcement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "announcement text"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://example.org/university-club-event-ontology#attendanceStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/university-club-event-ontology#Attendance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "attendance status"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://example.org/university-club-event-ontology#attends",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Connects a student to an event they attend."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/university-club-event-ontology#Student"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "attends"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://example.org/university-club-event-ontology#Event"
+  } ]
+}, {
+  "@id" : "http://example.org/university-club-event-ontology#clubName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/university-club-event-ontology#Club"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "club name"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://example.org/university-club-event-ontology#eventDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/university-club-event-ontology#Event"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "event date"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
+  } ]
+}, {
+  "@id" : "http://example.org/university-club-event-ontology#eventTitle",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/university-club-event-ontology#Event"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "event title"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://example.org/university-club-event-ontology#hasAnnouncement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Connects an event to its announcement text."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/university-club-event-ontology#Event"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has announcement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://example.org/university-club-event-ontology#Announcement"
+  } ]
+}, {
+  "@id" : "http://example.org/university-club-event-ontology#hasCategory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Connects an event to its category."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/university-club-event-ontology#Event"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has category"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://example.org/university-club-event-ontology#EventCategory"
+  } ]
+}, {
+  "@id" : "http://example.org/university-club-event-ontology#hasInterest",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Connects a student to an interest area."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/university-club-event-ontology#Student"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has interest"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://example.org/university-club-event-ontology#Interest"
+  } ]
+}, {
+  "@id" : "http://example.org/university-club-event-ontology#hasLocation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Connects an event to its location."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/university-club-event-ontology#Event"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has location"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://example.org/university-club-event-ontology#Location"
+  } ]
+}, {
+  "@id" : "http://example.org/university-club-event-ontology#hasOrganizer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Connects an event to its organizer."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/university-club-event-ontology#Event"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has organizer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://example.org/university-club-event-ontology#Organizer"
+  } ]
+}, {
+  "@id" : "http://example.org/university-club-event-ontology#hasRole",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Connects a student to a role in a club or event."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/university-club-event-ontology#Student"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has role"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://example.org/university-club-event-ontology#Role"
+  } ]
+}, {
+  "@id" : "http://example.org/university-club-event-ontology#interestName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/university-club-event-ontology#Interest"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "interest name"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://example.org/university-club-event-ontology#matchesInterest",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Connects an event to an interest area that it matches."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/university-club-event-ontology#Event"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "matches interest"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://example.org/university-club-event-ontology#Interest"
+  } ]
+}, {
+  "@id" : "http://example.org/university-club-event-ontology#memberOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Connects a student to a club they are a member of."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/university-club-event-ontology#Student"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "member of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://example.org/university-club-event-ontology#Club"
+  } ]
+}, {
+  "@id" : "http://example.org/university-club-event-ontology#organizes",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Connects a club to an event it organizes."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/university-club-event-ontology#Club"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "organizes"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://example.org/university-club-event-ontology#Event"
+  } ]
+}, {
+  "@id" : "http://example.org/university-club-event-ontology#questionText",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/university-club-event-ontology#SemanticQuestion"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "question text"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://example.org/university-club-event-ontology#recommendedFor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Connects a recommendation to the student who receives it."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/university-club-event-ontology#Recommendation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "recommended for"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://example.org/university-club-event-ontology#Student"
+  } ]
+}, {
+  "@id" : "http://example.org/university-club-event-ontology#recommendsEvent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Connects a recommendation to a suggested event."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/university-club-event-ontology#Recommendation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "recommends event"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://example.org/university-club-event-ontology#Event"
+  } ]
+}, {
+  "@id" : "http://example.org/university-club-event-ontology#roleName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/university-club-event-ontology#Role"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "role name"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://example.org/university-club-event-ontology#studentId",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/university-club-event-ontology#Student"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "student ID"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://schema.org/Event",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://schema.org/Place",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/2001/XMLSchema#date",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/Person",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+} ]

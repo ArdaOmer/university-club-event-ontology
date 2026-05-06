@@ -1,0 +1,367 @@
+@prefix : <http://example.org/university-club-event-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://example.org/university-club-event-ontology#> .
+
+<http://example.org/university-club-event-ontology> rdf:type owl:Ontology ;
+                                                     rdfs:comment "Version 2 of an ontology for representing university clubs, students, events, memberships, attendance records, announcements, interests, roles, and semantic question answering support."@en ;
+                                                     rdfs:label "University Club and Event Management Ontology"@en ;
+                                                     owl:versionInfo "2.0" .
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://example.org/university-club-event-ontology#attends
+:attends rdf:type owl:ObjectProperty ;
+         rdfs:domain :Student ;
+         rdfs:range :Event ;
+         rdfs:comment "Connects a student to an event they attend."@en ;
+         rdfs:label "attends"@en .
+
+
+###  http://example.org/university-club-event-ontology#hasAnnouncement
+:hasAnnouncement rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Event ;
+                 rdfs:range :Announcement ;
+                 rdfs:comment "Connects an event to its announcement text."@en ;
+                 rdfs:label "has announcement"@en .
+
+
+###  http://example.org/university-club-event-ontology#hasCategory
+:hasCategory rdf:type owl:ObjectProperty ;
+             rdfs:domain :Event ;
+             rdfs:range :EventCategory ;
+             rdfs:comment "Connects an event to its category."@en ;
+             rdfs:label "has category"@en .
+
+
+###  http://example.org/university-club-event-ontology#hasInterest
+:hasInterest rdf:type owl:ObjectProperty ;
+             rdfs:domain :Student ;
+             rdfs:range :Interest ;
+             rdfs:comment "Connects a student to an interest area."@en ;
+             rdfs:label "has interest"@en .
+
+
+###  http://example.org/university-club-event-ontology#hasLocation
+:hasLocation rdf:type owl:ObjectProperty ;
+             rdfs:domain :Event ;
+             rdfs:range :Location ;
+             rdfs:comment "Connects an event to its location."@en ;
+             rdfs:label "has location"@en .
+
+
+###  http://example.org/university-club-event-ontology#hasOrganizer
+:hasOrganizer rdf:type owl:ObjectProperty ;
+              rdfs:domain :Event ;
+              rdfs:range :Organizer ;
+              rdfs:comment "Connects an event to its organizer."@en ;
+              rdfs:label "has organizer"@en .
+
+
+###  http://example.org/university-club-event-ontology#hasRole
+:hasRole rdf:type owl:ObjectProperty ;
+         rdfs:domain :Student ;
+         rdfs:range :Role ;
+         rdfs:comment "Connects a student to a role in a club or event."@en ;
+         rdfs:label "has role"@en .
+
+
+###  http://example.org/university-club-event-ontology#matchesInterest
+:matchesInterest rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Event ;
+                 rdfs:range :Interest ;
+                 rdfs:comment "Connects an event to an interest area that it matches."@en ;
+                 rdfs:label "matches interest"@en .
+
+
+###  http://example.org/university-club-event-ontology#memberOf
+:memberOf rdf:type owl:ObjectProperty ;
+          rdfs:domain :Student ;
+          rdfs:range :Club ;
+          rdfs:comment "Connects a student to a club they are a member of."@en ;
+          rdfs:label "member of"@en .
+
+
+###  http://example.org/university-club-event-ontology#organizes
+:organizes rdf:type owl:ObjectProperty ;
+           rdfs:domain :Club ;
+           rdfs:range :Event ;
+           rdfs:comment "Connects a club to an event it organizes."@en ;
+           rdfs:label "organizes"@en .
+
+
+###  http://example.org/university-club-event-ontology#recommendedFor
+:recommendedFor rdf:type owl:ObjectProperty ;
+                rdfs:domain :Recommendation ;
+                rdfs:range :Student ;
+                rdfs:comment "Connects a recommendation to the student who receives it."@en ;
+                rdfs:label "recommended for"@en .
+
+
+###  http://example.org/university-club-event-ontology#recommendsEvent
+:recommendsEvent rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Recommendation ;
+                 rdfs:range :Event ;
+                 rdfs:comment "Connects a recommendation to a suggested event."@en ;
+                 rdfs:label "recommends event"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://example.org/university-club-event-ontology#announcementText
+:announcementText rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Announcement ;
+                  rdfs:range xsd:string ;
+                  rdfs:label "announcement text"@en .
+
+
+###  http://example.org/university-club-event-ontology#attendanceStatus
+:attendanceStatus rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Attendance ;
+                  rdfs:range xsd:string ;
+                  rdfs:label "attendance status"@en .
+
+
+###  http://example.org/university-club-event-ontology#clubName
+:clubName rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Club ;
+          rdfs:range xsd:string ;
+          rdfs:label "club name"@en .
+
+
+###  http://example.org/university-club-event-ontology#eventDate
+:eventDate rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Event ;
+           rdfs:range xsd:date ;
+           rdfs:label "event date"@en .
+
+
+###  http://example.org/university-club-event-ontology#eventTitle
+:eventTitle rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Event ;
+            rdfs:range xsd:string ;
+            rdfs:label "event title"@en .
+
+
+###  http://example.org/university-club-event-ontology#interestName
+:interestName rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Interest ;
+              rdfs:range xsd:string ;
+              rdfs:label "interest name"@en .
+
+
+###  http://example.org/university-club-event-ontology#questionText
+:questionText rdf:type owl:DatatypeProperty ;
+              rdfs:domain :SemanticQuestion ;
+              rdfs:range xsd:string ;
+              rdfs:label "question text"@en .
+
+
+###  http://example.org/university-club-event-ontology#roleName
+:roleName rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Role ;
+          rdfs:range xsd:string ;
+          rdfs:label "role name"@en .
+
+
+###  http://example.org/university-club-event-ontology#studentId
+:studentId rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Student ;
+           rdfs:range xsd:string ;
+           rdfs:label "student ID"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://example.org/university-club-event-ontology#Announcement
+:Announcement rdf:type owl:Class ;
+              rdfs:comment "A text-based announcement describing a club, event, or activity."@en ;
+              rdfs:label "Announcement"@en .
+
+
+###  http://example.org/university-club-event-ontology#Attendance
+:Attendance rdf:type owl:Class ;
+            rdfs:comment "A record showing that a student attended an event."@en ;
+            rdfs:label "Attendance"@en .
+
+
+###  http://example.org/university-club-event-ontology#Club
+:Club rdf:type owl:Class ;
+      rdfs:comment "A student organization within a university."@en ;
+      rdfs:label "Club"@en .
+
+
+###  http://example.org/university-club-event-ontology#Event
+:Event rdf:type owl:Class ;
+       rdfs:subClassOf <http://schema.org/Event> ;
+       rdfs:comment "An activity organized by a university club."@en ;
+       rdfs:label "Event"@en .
+
+
+###  http://example.org/university-club-event-ontology#EventCategory
+:EventCategory rdf:type owl:Class ;
+               rdfs:comment "A category describing the topic or type of an event."@en ;
+               rdfs:label "Event Category"@en .
+
+
+###  http://example.org/university-club-event-ontology#Interest
+:Interest rdf:type owl:Class ;
+          rdfs:comment "A student's area of interest, such as artificial intelligence, software development, music, or sports."@en ;
+          rdfs:label "Interest"@en .
+
+
+###  http://example.org/university-club-event-ontology#Location
+:Location rdf:type owl:Class ;
+          rdfs:subClassOf <http://schema.org/Place> ;
+          rdfs:comment "A physical or virtual place where an event is held."@en ;
+          rdfs:label "Location"@en .
+
+
+###  http://example.org/university-club-event-ontology#Membership
+:Membership rdf:type owl:Class ;
+            rdfs:comment "A relationship representing a student's membership in a club."@en ;
+            rdfs:label "Membership"@en .
+
+
+###  http://example.org/university-club-event-ontology#Organizer
+:Organizer rdf:type owl:Class ;
+           rdfs:comment "A person or club responsible for organizing an event."@en ;
+           rdfs:label "Organizer"@en .
+
+
+###  http://example.org/university-club-event-ontology#Recommendation
+:Recommendation rdf:type owl:Class ;
+                rdfs:comment "A suggested club or event generated according to student interests, memberships, or participation history."@en ;
+                rdfs:label "Recommendation"@en .
+
+
+###  http://example.org/university-club-event-ontology#Role
+:Role rdf:type owl:Class ;
+      rdfs:comment "A role assigned to a student in a club or event, such as member, president, organizer, or participant."@en ;
+      rdfs:label "Role"@en .
+
+
+###  http://example.org/university-club-event-ontology#SemanticQuestion
+:SemanticQuestion rdf:type owl:Class ;
+                  rdfs:comment "A natural language question that can be answered using ontology concepts and relationships."@en ;
+                  rdfs:label "Semantic Question"@en .
+
+
+###  http://example.org/university-club-event-ontology#Student
+:Student rdf:type owl:Class ;
+         rdfs:subClassOf <http://xmlns.com/foaf/0.1/Person> ;
+         rdfs:comment "A university student who may join clubs, attend events, and have interests."@en ;
+         rdfs:label "Student"@en .
+
+
+###  http://schema.org/Event
+<http://schema.org/Event> rdf:type owl:Class .
+
+
+###  http://schema.org/Place
+<http://schema.org/Place> rdf:type owl:Class .
+
+
+###  http://xmlns.com/foaf/0.1/Person
+<http://xmlns.com/foaf/0.1/Person> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://example.org/university-club-event-ontology#AIWorkshop2026
+:AIWorkshop2026 rdf:type owl:NamedIndividual ,
+                         :Event ;
+                :hasAnnouncement :AIWorkshopAnnouncement ;
+                :hasCategory :TechnologyCategory ;
+                :hasLocation :RoomA101 ;
+                :matchesInterest :ArtificialIntelligence ;
+                :eventDate "2026-05-10"^^xsd:date ;
+                :eventTitle "AI Workshop 2026" .
+
+
+###  http://example.org/university-club-event-ontology#AIWorkshopAnnouncement
+:AIWorkshopAnnouncement rdf:type owl:NamedIndividual ,
+                                 :Announcement ;
+                        :announcementText "Computer Science Club organizes an AI Workshop for students interested in artificial intelligence and software development." .
+
+
+###  http://example.org/university-club-event-ontology#ArdaStudent
+:ArdaStudent rdf:type owl:NamedIndividual ,
+                      :Student ;
+             :attends :AIWorkshop2026 ;
+             :hasInterest :ArtificialIntelligence ;
+             :hasRole :ClubMember ;
+             :memberOf :ComputerScienceClub ;
+             :studentId "2026001" .
+
+
+###  http://example.org/university-club-event-ontology#ArtificialIntelligence
+:ArtificialIntelligence rdf:type owl:NamedIndividual ,
+                                 :Interest ;
+                        :interestName "Artificial Intelligence" .
+
+
+###  http://example.org/university-club-event-ontology#ClubMember
+:ClubMember rdf:type owl:NamedIndividual ,
+                     :Role ;
+            :roleName "Club Member" .
+
+
+###  http://example.org/university-club-event-ontology#ComputerScienceClub
+:ComputerScienceClub rdf:type owl:NamedIndividual ,
+                              :Club ;
+                     :organizes :AIWorkshop2026 ;
+                     :clubName "Computer Science Club" .
+
+
+###  http://example.org/university-club-event-ontology#Question1
+:Question1 rdf:type owl:NamedIndividual ,
+                    :SemanticQuestion ;
+           :questionText "Which events are organized by the Computer Science Club?" .
+
+
+###  http://example.org/university-club-event-ontology#Question2
+:Question2 rdf:type owl:NamedIndividual ,
+                    :SemanticQuestion ;
+           :questionText "Which events match the student's artificial intelligence interest?" .
+
+
+###  http://example.org/university-club-event-ontology#RecommendationForArda
+:RecommendationForArda rdf:type owl:NamedIndividual ,
+                                :Recommendation ;
+                       :recommendedFor :ArdaStudent ;
+                       :recommendsEvent :AIWorkshop2026 .
+
+
+###  http://example.org/university-club-event-ontology#RoomA101
+:RoomA101 rdf:type owl:NamedIndividual ,
+                   :Location ;
+          rdfs:label "Room A101"@en .
+
+
+###  http://example.org/university-club-event-ontology#TechnologyCategory
+:TechnologyCategory rdf:type owl:NamedIndividual ,
+                             :EventCategory ;
+                    rdfs:label "Technology Event"@en .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
