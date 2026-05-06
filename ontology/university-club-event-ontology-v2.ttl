@@ -1,0 +1,246 @@
+@prefix : <http://example.org/university-club-event-ontology#> .
+@prefix uce: <http://example.org/university-club-event-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix schema: <http://schema.org/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://example.org/university-club-event-ontology>
+    a owl:Ontology ;
+    rdfs:label "University Club and Event Management Ontology"@en ;
+    rdfs:comment "Version 2 of an ontology for representing university clubs, students, events, memberships, attendance records, announcements, interests, roles, and semantic question answering support."@en ;
+    owl:versionInfo "2.0" .
+
+#################################################################
+# Classes
+#################################################################
+
+uce:Student a owl:Class ;
+    rdfs:subClassOf foaf:Person ;
+    rdfs:label "Student"@en ;
+    rdfs:comment "A university student who may join clubs, attend events, and have interests."@en .
+
+uce:Club a owl:Class ;
+    rdfs:label "Club"@en ;
+    rdfs:comment "A student organization within a university."@en .
+
+uce:Event a owl:Class ;
+    rdfs:subClassOf schema:Event ;
+    rdfs:label "Event"@en ;
+    rdfs:comment "An activity organized by a university club."@en .
+
+uce:Membership a owl:Class ;
+    rdfs:label "Membership"@en ;
+    rdfs:comment "A relationship representing a student's membership in a club."@en .
+
+uce:Attendance a owl:Class ;
+    rdfs:label "Attendance"@en ;
+    rdfs:comment "A record showing that a student attended an event."@en .
+
+uce:Location a owl:Class ;
+    rdfs:subClassOf schema:Place ;
+    rdfs:label "Location"@en ;
+    rdfs:comment "A physical or virtual place where an event is held."@en .
+
+uce:EventCategory a owl:Class ;
+    rdfs:label "Event Category"@en ;
+    rdfs:comment "A category describing the topic or type of an event."@en .
+
+uce:Organizer a owl:Class ;
+    rdfs:label "Organizer"@en ;
+    rdfs:comment "A person or club responsible for organizing an event."@en .
+
+uce:Announcement a owl:Class ;
+    rdfs:label "Announcement"@en ;
+    rdfs:comment "A text-based announcement describing a club, event, or activity."@en .
+
+uce:Interest a owl:Class ;
+    rdfs:label "Interest"@en ;
+    rdfs:comment "A student's area of interest, such as artificial intelligence, software development, music, or sports."@en .
+
+uce:Role a owl:Class ;
+    rdfs:label "Role"@en ;
+    rdfs:comment "A role assigned to a student in a club or event, such as member, president, organizer, or participant."@en .
+
+uce:Recommendation a owl:Class ;
+    rdfs:label "Recommendation"@en ;
+    rdfs:comment "A suggested club or event generated according to student interests, memberships, or participation history."@en .
+
+uce:SemanticQuestion a owl:Class ;
+    rdfs:label "Semantic Question"@en ;
+    rdfs:comment "A natural language question that can be answered using ontology concepts and relationships."@en .
+
+#################################################################
+# Object Properties
+#################################################################
+
+uce:memberOf a owl:ObjectProperty ;
+    rdfs:label "member of"@en ;
+    rdfs:domain uce:Student ;
+    rdfs:range uce:Club ;
+    rdfs:comment "Connects a student to a club they are a member of."@en .
+
+uce:organizes a owl:ObjectProperty ;
+    rdfs:label "organizes"@en ;
+    rdfs:domain uce:Club ;
+    rdfs:range uce:Event ;
+    rdfs:comment "Connects a club to an event it organizes."@en .
+
+uce:attends a owl:ObjectProperty ;
+    rdfs:label "attends"@en ;
+    rdfs:domain uce:Student ;
+    rdfs:range uce:Event ;
+    rdfs:comment "Connects a student to an event they attend."@en .
+
+uce:hasLocation a owl:ObjectProperty ;
+    rdfs:label "has location"@en ;
+    rdfs:domain uce:Event ;
+    rdfs:range uce:Location ;
+    rdfs:comment "Connects an event to its location."@en .
+
+uce:hasCategory a owl:ObjectProperty ;
+    rdfs:label "has category"@en ;
+    rdfs:domain uce:Event ;
+    rdfs:range uce:EventCategory ;
+    rdfs:comment "Connects an event to its category."@en .
+
+uce:hasOrganizer a owl:ObjectProperty ;
+    rdfs:label "has organizer"@en ;
+    rdfs:domain uce:Event ;
+    rdfs:range uce:Organizer ;
+    rdfs:comment "Connects an event to its organizer."@en .
+
+uce:hasAnnouncement a owl:ObjectProperty ;
+    rdfs:label "has announcement"@en ;
+    rdfs:domain uce:Event ;
+    rdfs:range uce:Announcement ;
+    rdfs:comment "Connects an event to its announcement text."@en .
+
+uce:hasInterest a owl:ObjectProperty ;
+    rdfs:label "has interest"@en ;
+    rdfs:domain uce:Student ;
+    rdfs:range uce:Interest ;
+    rdfs:comment "Connects a student to an interest area."@en .
+
+uce:matchesInterest a owl:ObjectProperty ;
+    rdfs:label "matches interest"@en ;
+    rdfs:domain uce:Event ;
+    rdfs:range uce:Interest ;
+    rdfs:comment "Connects an event to an interest area that it matches."@en .
+
+uce:hasRole a owl:ObjectProperty ;
+    rdfs:label "has role"@en ;
+    rdfs:domain uce:Student ;
+    rdfs:range uce:Role ;
+    rdfs:comment "Connects a student to a role in a club or event."@en .
+
+uce:recommendsEvent a owl:ObjectProperty ;
+    rdfs:label "recommends event"@en ;
+    rdfs:domain uce:Recommendation ;
+    rdfs:range uce:Event ;
+    rdfs:comment "Connects a recommendation to a suggested event."@en .
+
+uce:recommendedFor a owl:ObjectProperty ;
+    rdfs:label "recommended for"@en ;
+    rdfs:domain uce:Recommendation ;
+    rdfs:range uce:Student ;
+    rdfs:comment "Connects a recommendation to the student who receives it."@en .
+
+#################################################################
+# Data Properties
+#################################################################
+
+uce:studentId a owl:DatatypeProperty ;
+    rdfs:label "student ID"@en ;
+    rdfs:domain uce:Student ;
+    rdfs:range xsd:string .
+
+uce:clubName a owl:DatatypeProperty ;
+    rdfs:label "club name"@en ;
+    rdfs:domain uce:Club ;
+    rdfs:range xsd:string .
+
+uce:eventTitle a owl:DatatypeProperty ;
+    rdfs:label "event title"@en ;
+    rdfs:domain uce:Event ;
+    rdfs:range xsd:string .
+
+uce:eventDate a owl:DatatypeProperty ;
+    rdfs:label "event date"@en ;
+    rdfs:domain uce:Event ;
+    rdfs:range xsd:date .
+
+uce:attendanceStatus a owl:DatatypeProperty ;
+    rdfs:label "attendance status"@en ;
+    rdfs:domain uce:Attendance ;
+    rdfs:range xsd:string .
+
+uce:announcementText a owl:DatatypeProperty ;
+    rdfs:label "announcement text"@en ;
+    rdfs:domain uce:Announcement ;
+    rdfs:range xsd:string .
+
+uce:interestName a owl:DatatypeProperty ;
+    rdfs:label "interest name"@en ;
+    rdfs:domain uce:Interest ;
+    rdfs:range xsd:string .
+
+uce:roleName a owl:DatatypeProperty ;
+    rdfs:label "role name"@en ;
+    rdfs:domain uce:Role ;
+    rdfs:range xsd:string .
+
+uce:questionText a owl:DatatypeProperty ;
+    rdfs:label "question text"@en ;
+    rdfs:domain uce:SemanticQuestion ;
+    rdfs:range xsd:string .
+
+#################################################################
+# Example Individuals
+#################################################################
+
+uce:ArdaStudent a uce:Student ;
+    uce:studentId "2026001" ;
+    uce:hasInterest uce:ArtificialIntelligence ;
+    uce:memberOf uce:ComputerScienceClub ;
+    uce:attends uce:AIWorkshop2026 ;
+    uce:hasRole uce:ClubMember .
+
+uce:ComputerScienceClub a uce:Club ;
+    uce:clubName "Computer Science Club" ;
+    uce:organizes uce:AIWorkshop2026 .
+
+uce:AIWorkshop2026 a uce:Event ;
+    uce:eventTitle "AI Workshop 2026" ;
+    uce:eventDate "2026-05-10"^^xsd:date ;
+    uce:hasLocation uce:RoomA101 ;
+    uce:hasCategory uce:TechnologyCategory ;
+    uce:matchesInterest uce:ArtificialIntelligence ;
+    uce:hasAnnouncement uce:AIWorkshopAnnouncement .
+
+uce:AIWorkshopAnnouncement a uce:Announcement ;
+    uce:announcementText "Computer Science Club organizes an AI Workshop for students interested in artificial intelligence and software development." .
+
+uce:RoomA101 a uce:Location ;
+    rdfs:label "Room A101"@en .
+
+uce:TechnologyCategory a uce:EventCategory ;
+    rdfs:label "Technology Event"@en .
+
+uce:ArtificialIntelligence a uce:Interest ;
+    uce:interestName "Artificial Intelligence" .
+
+uce:ClubMember a uce:Role ;
+    uce:roleName "Club Member" .
+
+uce:RecommendationForArda a uce:Recommendation ;
+    uce:recommendedFor uce:ArdaStudent ;
+    uce:recommendsEvent uce:AIWorkshop2026 .
+
+uce:Question1 a uce:SemanticQuestion ;
+    uce:questionText "Which events are organized by the Computer Science Club?" .
+
+uce:Question2 a uce:SemanticQuestion ;
+    uce:questionText "Which events match the student's artificial intelligence interest?" .
