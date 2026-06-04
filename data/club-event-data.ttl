@@ -1,0 +1,300 @@
+@prefix uce: <http://example.org/university-club-event-ontology#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+#################################################################
+# Students
+#################################################################
+
+uce:ArdaStudent a uce:Student ;
+    rdfs:label "Arda Student"@en ;
+    uce:studentId "2026001" ;
+    uce:hasInterest uce:ArtificialIntelligence ;
+    uce:hasInterest uce:SoftwareDevelopment ;
+    uce:memberOf uce:ComputerScienceClub ;
+    uce:attends uce:AIWorkshop2026 ;
+    uce:attends uce:PythonBootcamp2026 ;
+    uce:hasRole uce:ClubMember .
+
+uce:AyseStudent a uce:Student ;
+    rdfs:label "Ayşe Student"@en ;
+    uce:studentId "2026002" ;
+    uce:hasInterest uce:Robotics ;
+    uce:hasInterest uce:ArtificialIntelligence ;
+    uce:memberOf uce:RoboticsClub ;
+    uce:attends uce:RoboticsMeetup2026 ;
+    uce:attends uce:AIWorkshop2026 ;
+    uce:hasRole uce:ClubMember .
+
+uce:MehmetStudent a uce:Student ;
+    rdfs:label "Mehmet Student"@en ;
+    uce:studentId "2026003" ;
+    uce:hasInterest uce:Music ;
+    uce:memberOf uce:MusicClub ;
+    uce:attends uce:MusicNight2026 ;
+    uce:hasRole uce:ClubMember .
+
+uce:ZeynepStudent a uce:Student ;
+    rdfs:label "Zeynep Student"@en ;
+    uce:studentId "2026004" ;
+    uce:hasInterest uce:Entrepreneurship ;
+    uce:hasInterest uce:SoftwareDevelopment ;
+    uce:memberOf uce:EntrepreneurshipClub ;
+    uce:attends uce:StartupSeminar2026 ;
+    uce:hasRole uce:ClubPresident .
+
+uce:CanStudent a uce:Student ;
+    rdfs:label "Can Student"@en ;
+    uce:studentId "2026005" ;
+    uce:hasInterest uce:Sports ;
+    uce:memberOf uce:SportsClub ;
+    uce:attends uce:CampusRun2026 ;
+    uce:hasRole uce:ClubMember .
+
+#################################################################
+# Clubs
+#################################################################
+
+uce:ComputerScienceClub a uce:Club ;
+    rdfs:label "Computer Science Club"@en ;
+    uce:clubName "Computer Science Club" ;
+    uce:organizes uce:AIWorkshop2026 ;
+    uce:organizes uce:PythonBootcamp2026 .
+
+uce:RoboticsClub a uce:Club ;
+    rdfs:label "Robotics Club"@en ;
+    uce:clubName "Robotics Club" ;
+    uce:organizes uce:RoboticsMeetup2026 .
+
+uce:MusicClub a uce:Club ;
+    rdfs:label "Music Club"@en ;
+    uce:clubName "Music Club" ;
+    uce:organizes uce:MusicNight2026 .
+
+uce:EntrepreneurshipClub a uce:Club ;
+    rdfs:label "Entrepreneurship Club"@en ;
+    uce:clubName "Entrepreneurship Club" ;
+    uce:organizes uce:StartupSeminar2026 .
+
+uce:SportsClub a uce:Club ;
+    rdfs:label "Sports Club"@en ;
+    uce:clubName "Sports Club" ;
+    uce:organizes uce:CampusRun2026 .
+
+#################################################################
+# Events
+#################################################################
+
+uce:AIWorkshop2026 a uce:Event ;
+    rdfs:label "AI Workshop 2026"@en ;
+    uce:eventTitle "AI Workshop 2026" ;
+    uce:eventDate "2026-05-10"^^xsd:date ;
+    uce:hasLocation uce:RoomA101 ;
+    uce:hasCategory uce:TechnologyCategory ;
+    uce:matchesInterest uce:ArtificialIntelligence ;
+    uce:hasAnnouncement uce:AIWorkshopAnnouncement ;
+    uce:hasOrganizer uce:ComputerScienceClub .
+
+uce:PythonBootcamp2026 a uce:Event ;
+    rdfs:label "Python Bootcamp 2026"@en ;
+    uce:eventTitle "Python Bootcamp 2026" ;
+    uce:eventDate "2026-05-15"^^xsd:date ;
+    uce:hasLocation uce:ComputerLab1 ;
+    uce:hasCategory uce:TechnologyCategory ;
+    uce:matchesInterest uce:SoftwareDevelopment ;
+    uce:hasAnnouncement uce:PythonBootcampAnnouncement ;
+    uce:hasOrganizer uce:ComputerScienceClub .
+
+uce:RoboticsMeetup2026 a uce:Event ;
+    rdfs:label "Robotics Meetup 2026"@en ;
+    uce:eventTitle "Robotics Meetup 2026" ;
+    uce:eventDate "2026-05-20"^^xsd:date ;
+    uce:hasLocation uce:EngineeringHall ;
+    uce:hasCategory uce:TechnologyCategory ;
+    uce:matchesInterest uce:Robotics ;
+    uce:hasAnnouncement uce:RoboticsMeetupAnnouncement ;
+    uce:hasOrganizer uce:RoboticsClub .
+
+uce:MusicNight2026 a uce:Event ;
+    rdfs:label "Music Night 2026"@en ;
+    uce:eventTitle "Music Night 2026" ;
+    uce:eventDate "2026-05-22"^^xsd:date ;
+    uce:hasLocation uce:ConferenceHall ;
+    uce:hasCategory uce:SocialCategory ;
+    uce:matchesInterest uce:Music ;
+    uce:hasAnnouncement uce:MusicNightAnnouncement ;
+    uce:hasOrganizer uce:MusicClub .
+
+uce:StartupSeminar2026 a uce:Event ;
+    rdfs:label "Startup Seminar 2026"@en ;
+    uce:eventTitle "Startup Seminar 2026" ;
+    uce:eventDate "2026-05-25"^^xsd:date ;
+    uce:hasLocation uce:SeminarRoomB ;
+    uce:hasCategory uce:CareerCategory ;
+    uce:matchesInterest uce:Entrepreneurship ;
+    uce:hasAnnouncement uce:StartupSeminarAnnouncement ;
+    uce:hasOrganizer uce:EntrepreneurshipClub .
+
+uce:CampusRun2026 a uce:Event ;
+    rdfs:label "Campus Run 2026"@en ;
+    uce:eventTitle "Campus Run 2026" ;
+    uce:eventDate "2026-05-28"^^xsd:date ;
+    uce:hasLocation uce:SportsField ;
+    uce:hasCategory uce:SportsCategory ;
+    uce:matchesInterest uce:Sports ;
+    uce:hasAnnouncement uce:CampusRunAnnouncement ;
+    uce:hasOrganizer uce:SportsClub .
+
+#################################################################
+# Announcements
+#################################################################
+
+uce:AIWorkshopAnnouncement a uce:Announcement ;
+    rdfs:label "AI Workshop Announcement"@en ;
+    uce:announcementText "Computer Science Club organizes an AI Workshop for students interested in artificial intelligence." .
+
+uce:PythonBootcampAnnouncement a uce:Announcement ;
+    rdfs:label "Python Bootcamp Announcement"@en ;
+    uce:announcementText "Computer Science Club organizes a Python Bootcamp for students who want to improve software development skills." .
+
+uce:RoboticsMeetupAnnouncement a uce:Announcement ;
+    rdfs:label "Robotics Meetup Announcement"@en ;
+    uce:announcementText "Robotics Club organizes a meetup about robotics projects and autonomous systems." .
+
+uce:MusicNightAnnouncement a uce:Announcement ;
+    rdfs:label "Music Night Announcement"@en ;
+    uce:announcementText "Music Club organizes a social music night for students." .
+
+uce:StartupSeminarAnnouncement a uce:Announcement ;
+    rdfs:label "Startup Seminar Announcement"@en ;
+    uce:announcementText "Entrepreneurship Club organizes a startup seminar about business ideas and innovation." .
+
+uce:CampusRunAnnouncement a uce:Announcement ;
+    rdfs:label "Campus Run Announcement"@en ;
+    uce:announcementText "Sports Club organizes a campus run event for students interested in sports." .
+
+#################################################################
+# Locations
+#################################################################
+
+uce:RoomA101 a uce:Location ;
+    rdfs:label "Room A101"@en .
+
+uce:ComputerLab1 a uce:Location ;
+    rdfs:label "Computer Lab 1"@en .
+
+uce:EngineeringHall a uce:Location ;
+    rdfs:label "Engineering Hall"@en .
+
+uce:ConferenceHall a uce:Location ;
+    rdfs:label "Conference Hall"@en .
+
+uce:SeminarRoomB a uce:Location ;
+    rdfs:label "Seminar Room B"@en .
+
+uce:SportsField a uce:Location ;
+    rdfs:label "Sports Field"@en .
+
+#################################################################
+# Categories
+#################################################################
+
+uce:TechnologyCategory a uce:EventCategory ;
+    rdfs:label "Technology Event"@en .
+
+uce:SocialCategory a uce:EventCategory ;
+    rdfs:label "Social Event"@en .
+
+uce:CareerCategory a uce:EventCategory ;
+    rdfs:label "Career Event"@en .
+
+uce:SportsCategory a uce:EventCategory ;
+    rdfs:label "Sports Event"@en .
+
+#################################################################
+# Interests
+#################################################################
+
+uce:ArtificialIntelligence a uce:Interest ;
+    rdfs:label "Artificial Intelligence"@en ;
+    uce:interestName "Artificial Intelligence" .
+
+uce:SoftwareDevelopment a uce:Interest ;
+    rdfs:label "Software Development"@en ;
+    uce:interestName "Software Development" .
+
+uce:Robotics a uce:Interest ;
+    rdfs:label "Robotics"@en ;
+    uce:interestName "Robotics" .
+
+uce:Music a uce:Interest ;
+    rdfs:label "Music"@en ;
+    uce:interestName "Music" .
+
+uce:Entrepreneurship a uce:Interest ;
+    rdfs:label "Entrepreneurship"@en ;
+    uce:interestName "Entrepreneurship" .
+
+uce:Sports a uce:Interest ;
+    rdfs:label "Sports"@en ;
+    uce:interestName "Sports" .
+
+#################################################################
+# Roles
+#################################################################
+
+uce:ClubMember a uce:Role ;
+    rdfs:label "Club Member"@en ;
+    uce:roleName "Club Member" .
+
+uce:ClubPresident a uce:Role ;
+    rdfs:label "Club President"@en ;
+    uce:roleName "Club President" .
+
+#################################################################
+# Recommendations
+#################################################################
+
+uce:RecommendationForArdaAI a uce:Recommendation ;
+    rdfs:label "Recommendation for Arda - AI Workshop"@en ;
+    uce:recommendedFor uce:ArdaStudent ;
+    uce:recommendsEvent uce:AIWorkshop2026 .
+
+uce:RecommendationForArdaPython a uce:Recommendation ;
+    rdfs:label "Recommendation for Arda - Python Bootcamp"@en ;
+    uce:recommendedFor uce:ArdaStudent ;
+    uce:recommendsEvent uce:PythonBootcamp2026 .
+
+uce:RecommendationForAyseRobotics a uce:Recommendation ;
+    rdfs:label "Recommendation for Ayşe - Robotics Meetup"@en ;
+    uce:recommendedFor uce:AyseStudent ;
+    uce:recommendsEvent uce:RoboticsMeetup2026 .
+
+uce:RecommendationForZeynepStartup a uce:Recommendation ;
+    rdfs:label "Recommendation for Zeynep - Startup Seminar"@en ;
+    uce:recommendedFor uce:ZeynepStudent ;
+    uce:recommendsEvent uce:StartupSeminar2026 .
+
+#################################################################
+# Semantic Questions
+#################################################################
+
+uce:Question1 a uce:SemanticQuestion ;
+    rdfs:label "Question 1"@en ;
+    uce:questionText "Which events are organized by the Computer Science Club?" .
+
+uce:Question2 a uce:SemanticQuestion ;
+    rdfs:label "Question 2"@en ;
+    uce:questionText "Which events match Arda's interests?" .
+
+uce:Question3 a uce:SemanticQuestion ;
+    rdfs:label "Question 3"@en ;
+    uce:questionText "Which events are recommended for Arda Student?" .
+
+uce:Question4 a uce:SemanticQuestion ;
+    rdfs:label "Question 4"@en ;
+    uce:questionText "How many events does each club organize?" .
+
+uce:Question5 a uce:SemanticQuestion ;
+    rdfs:label "Question 5"@en ;
+    uce:questionText "Which students attended technology-related events?" .
