@@ -1,0 +1,123 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix uce: <http://example.org/university-club-event-ontology#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+#################################################################
+# SHACL Validation Shapes
+# University Club and Event Management Knowledge Graph
+#################################################################
+
+uce:StudentShape
+    a sh:NodeShape ;
+    sh:targetClass uce:Student ;
+    sh:property [
+        sh:path uce:studentId ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Each student must have exactly one student ID." ;
+    ] ;
+    sh:property [
+        sh:path uce:memberOf ;
+        sh:class uce:Club ;
+        sh:minCount 1 ;
+        sh:message "Each student should be a member of at least one club." ;
+    ] ;
+    sh:property [
+        sh:path uce:hasInterest ;
+        sh:class uce:Interest ;
+        sh:minCount 1 ;
+        sh:message "Each student should have at least one interest." ;
+    ] .
+
+uce:ClubShape
+    a sh:NodeShape ;
+    sh:targetClass uce:Club ;
+    sh:property [
+        sh:path uce:clubName ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Each club must have exactly one club name." ;
+    ] ;
+    sh:property [
+        sh:path uce:organizes ;
+        sh:class uce:Event ;
+        sh:minCount 1 ;
+        sh:message "Each club should organize at least one event." ;
+    ] .
+
+uce:EventShape
+    a sh:NodeShape ;
+    sh:targetClass uce:Event ;
+    sh:property [
+        sh:path uce:eventTitle ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Each event must have exactly one event title." ;
+    ] ;
+    sh:property [
+        sh:path uce:eventDate ;
+        sh:datatype xsd:date ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Each event must have exactly one event date." ;
+    ] ;
+    sh:property [
+        sh:path uce:hasLocation ;
+        sh:class uce:Location ;
+        sh:minCount 1 ;
+        sh:message "Each event must have at least one location." ;
+    ] ;
+    sh:property [
+        sh:path uce:hasCategory ;
+        sh:class uce:EventCategory ;
+        sh:minCount 1 ;
+        sh:message "Each event must have at least one category." ;
+    ] ;
+    sh:property [
+        sh:path uce:hasAnnouncement ;
+        sh:class uce:Announcement ;
+        sh:minCount 1 ;
+        sh:message "Each event should have an announcement." ;
+    ] .
+
+uce:AnnouncementShape
+    a sh:NodeShape ;
+    sh:targetClass uce:Announcement ;
+    sh:property [
+        sh:path uce:announcementText ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:message "Each announcement must include announcement text." ;
+    ] .
+
+uce:InterestShape
+    a sh:NodeShape ;
+    sh:targetClass uce:Interest ;
+    sh:property [
+        sh:path uce:interestName ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Each interest must have exactly one interest name." ;
+    ] .
+
+uce:RecommendationShape
+    a sh:NodeShape ;
+    sh:targetClass uce:Recommendation ;
+    sh:property [
+        sh:path uce:recommendedFor ;
+        sh:class uce:Student ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Each recommendation must be assigned to exactly one student." ;
+    ] ;
+    sh:property [
+        sh:path uce:recommendsEvent ;
+        sh:class uce:Event ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Each recommendation must recommend exactly one event." ;
+    ] .
