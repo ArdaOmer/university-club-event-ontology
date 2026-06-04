@@ -1,0 +1,120 @@
+#################################################################
+# SPARQL Queries for University Club and Event Management Ontology
+#################################################################
+
+PREFIX uce: <http://example.org/university-club-event-ontology#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+#################################################################
+# Query 1 - List all students
+#################################################################
+
+SELECT ?student ?label
+WHERE {
+  ?student a uce:Student .
+  OPTIONAL { ?student rdfs:label ?label . }
+}
+
+#################################################################
+# Query 2 - List all clubs
+#################################################################
+
+SELECT ?club ?clubName
+WHERE {
+  ?club a uce:Club ;
+        uce:clubName ?clubName .
+}
+
+#################################################################
+# Query 3 - List all events with their dates and locations
+#################################################################
+
+SELECT ?event ?eventTitle ?eventDate ?location
+WHERE {
+  ?event a uce:Event ;
+         uce:eventTitle ?eventTitle ;
+         uce:eventDate ?eventDate ;
+         uce:hasLocation ?location .
+}
+
+#################################################################
+# Query 4 - Find events organized by the Computer Science Club
+#################################################################
+
+SELECT ?event ?eventTitle
+WHERE {
+  uce:ComputerScienceClub uce:organizes ?event .
+  ?event uce:eventTitle ?eventTitle .
+}
+
+#################################################################
+# Query 5 - Find students and their club memberships
+#################################################################
+
+SELECT ?student ?studentLabel ?club ?clubName
+WHERE {
+  ?student a uce:Student ;
+           uce:memberOf ?club .
+  ?club uce:clubName ?clubName .
+  OPTIONAL { ?student rdfs:label ?studentLabel . }
+}
+
+#################################################################
+# Query 6 - Find students and their interests
+#################################################################
+
+SELECT ?student ?studentLabel ?interest ?interestName
+WHERE {
+  ?student a uce:Student ;
+           uce:hasInterest ?interest .
+  ?interest uce:interestName ?interestName .
+  OPTIONAL { ?student rdfs:label ?studentLabel . }
+}
+
+#################################################################
+# Query 7 - Find events matching Artificial Intelligence interest
+#################################################################
+
+SELECT ?event ?eventTitle
+WHERE {
+  ?event a uce:Event ;
+         uce:matchesInterest uce:ArtificialIntelligence ;
+         uce:eventTitle ?eventTitle .
+}
+
+#################################################################
+# Query 8 - Find recommended events for Arda Student
+#################################################################
+
+SELECT ?recommendation ?event ?eventTitle
+WHERE {
+  ?recommendation a uce:Recommendation ;
+                  uce:recommendedFor uce:ArdaStudent ;
+                  uce:recommendsEvent ?event .
+  ?event uce:eventTitle ?eventTitle .
+}
+
+#################################################################
+# Query 9 - Count how many events each club organizes
+#################################################################
+
+SELECT ?club ?clubName (COUNT(?event) AS ?eventCount)
+WHERE {
+  ?club a uce:Club ;
+        uce:clubName ?clubName ;
+        uce:organizes ?event .
+}
+GROUP BY ?club ?clubName
+ORDER BY DESC(?eventCount)
+
+#################################################################
+# Query 10 - List event announcements
+#################################################################
+
+SELECT ?eventTitle ?announcementText
+WHERE {
+  ?event a uce:Event ;
+         uce:eventTitle ?eventTitle ;
+         uce:hasAnnouncement ?announcement .
+  ?announcement uce:announcementText ?announcementText .
+}
