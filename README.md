@@ -1,64 +1,22 @@
 # University Club and Event Management Ontology
 
-## Overview
+## Project Objective
 
-This project is an ontology engineering project developed for the Knowledge Engineering and Ontologies course. The ontology models university student clubs, students, memberships, events, attendance records, announcements, recommendations, interests, event categories, locations, and semantic relationships between these concepts.
+This project was developed for the Knowledge Engineering and Ontologies course. The goal is to model university clubs, students, events, memberships, attendance records, recommendations, and semantic question-answering concepts using Semantic Web technologies.
 
-The ontology was extended during Phase 2 in order to support semantic querying, ontology-driven recommendation concepts, ontology reuse, and semantic web documentation.
+The ontology provides a machine-understandable representation of university club activities and supports knowledge graph construction, semantic querying, and future AI-assisted applications.
 
 ---
 
 ## Domain
 
-The selected domain is university club and event management.
+University Club and Event Management
 
 ---
 
-## Purpose
+## Main Concepts
 
-The purpose of this ontology is to provide a structured and machine-understandable semantic knowledge model for representing university clubs, students, memberships, events, participation information, recommendations, interests, and semantic relationships.
-
-The ontology is designed to support:
-
-- Semantic querying
-- Ontology-driven information retrieval
-- Recommendation support
-- Future intelligent campus assistant systems
-- Semantic web applications
-
----
-
-## Scope
-
-The ontology focuses on:
-
-- Student clubs
-- Students
-- Club memberships
-- Club events
-- Event attendance
-- Event categories
-- Event locations
-- Event organizers
-- Student interests
-- Recommendations
-- Announcements
-- Semantic questions
-
-The ontology does not model:
-
-- Full university administration
-- Academic transcript systems
-- Payroll systems
-- Financial management systems
-- Human resources processes
-- Detailed academic course management
-
----
-
-## Core Concepts
-
-### Initial Concepts
+The ontology models the following core concepts:
 
 - Student
 - Club
@@ -68,84 +26,114 @@ The ontology does not model:
 - Location
 - EventCategory
 - Organizer
-
-### Extended Concepts (Phase 2)
-
 - Announcement
 - Interest
+- Role
 - Recommendation
 - SemanticQuestion
-- Role
 
 ---
 
-## Main Relationships
+## Ontology Design
 
-- A student can be a member of a club.
-- A club can organize events.
-- A student can attend events.
-- An event can have a location.
-- An event can belong to a category.
-- An event can have an organizer.
-- A student can have interests.
-- Events can match student interests.
-- Recommendations can recommend events to students.
-- Events can contain announcements.
+The ontology was developed using METHONTOLOGY principles.
 
----
+Existing ontologies reused:
 
-## Competency Questions
+- FOAF (Friend of a Friend)
+- Schema.org
 
-1. Which students are members of a specific club?
-2. Which events are organized by a specific club?
-3. Which students attended a specific event?
-4. Which events belong to a specific category?
-5. Where and when does a specific event take place?
-6. Which clubs organize technology-related events?
-7. Which students participated in more than one event?
-8. Which events match a student’s interests?
-9. Which events are recommended for a specific student?
-10. Which announcements belong to a specific event?
-11. Which clubs organize artificial intelligence related workshops?
-12. Which semantic questions can be answered by the ontology?
+Examples:
+
+- Student → subclass of foaf:Person
+- Event → subclass of schema:Event
+- Location → subclass of schema:Place
 
 ---
 
-## Ontology Expansion (Phase 2)
+## Data Acquisition
 
-The ontology was extended in Phase 2 with:
+Data was collected from university club management scenarios and manually modeled as RDF/Turtle instances.
 
-- Recommendation support
-- Semantic querying concepts
-- Interest modeling
-- Announcement structures
-- Additional object and datatype properties
-- Ontology reuse using schema.org and FOAF
-- Widoco ontology documentation
-- GitHub Pages publication
+Data sources include:
 
----
+- University club records
+- Student participation examples
+- Event information
+- Club announcements
+- Recommendation examples
 
-## Research Integration
-
-The project integrates concepts inspired by ontology-based university question answering systems and semantic recommendation approaches discussed in the Week 11 and Week 12 research materials.
-
-The ontology extension supports future semantic querying and ontology-driven recommendation functionality for university club and event management scenarios.
+The collected data was mapped to ontology concepts and transformed into RDF triples.
 
 ---
 
-## Ontology Reuse
+## Knowledge Graph Construction
 
-The ontology reuses several semantic web standards and vocabularies including:
+The knowledge graph consists of:
 
-- RDF
-- RDFS
-- OWL
-- XSD
-- FOAF
-- schema.org
+### Ontology Schema
 
-The schema.org vocabulary was partially reused for event and location modeling in order to improve semantic interoperability.
+```text
+ontology/university-club-event-ontology-v2.ttl
+```
+
+### Instance Data
+
+```text
+data/club-event-data.ttl
+```
+
+The ontology schema and instance-level data were imported into GraphDB and combined into a knowledge graph.
+
+---
+
+## SPARQL Queries
+
+Example semantic queries are provided in:
+
+```text
+queries/sparql-queries.rq
+```
+
+Example queries include:
+
+- List all students
+- List all clubs
+- Find club memberships
+- Find event organizers
+- Find recommended events
+- Find events matching interests
+- Count events organized by clubs
+
+---
+
+## SHACL Validation
+
+Validation rules are provided in:
+
+```text
+shacl/shacl-validation.ttl
+```
+
+The validation layer ensures:
+
+- Students have IDs
+- Clubs have names
+- Events have titles and dates
+- Events have categories and locations
+- Recommendations reference students and events
+
+---
+
+## Ontology Documentation
+
+Widoco documentation:
+
+https://ardaomer.github.io/university-club-event-ontology/
+
+WebVOWL visualization:
+
+https://ardaomer.github.io/university-club-event-ontology/widoco/UniversityClubEventOntology/webvowl/index.html
 
 ---
 
@@ -153,60 +141,64 @@ The schema.org vocabulary was partially reused for event and location modeling i
 
 ```text
 ontology/
-├── initial-ontology.ttl
-└── university-club-event-ontology-v2.ttl
+│
+├── university-club-event-ontology-v2.ttl
+
+data/
+│
+├── club-event-data.ttl
+
+queries/
+│
+├── sparql-queries.rq
+
+shacl/
+│
+├── shacl-validation.ttl
 
 docs/
-├── orsd-v1.docx
-├── orsd-v2.docx
-├── phase-2-report.docx
-└── widoco/
+│
+├── widoco/
+
+report/
+
+presentation/
 
 notes/
-└── design-decisions.md
 ```
 
 ---
 
-## Online Ontology Documentation
+## Technologies Used
 
-Widoco ontology documentation is available at:
-
-https://ardaomer.github.io/university-club-event-ontology/widoco/UniversityClubEventOntology/index-en.html
-
----
-
-## WebVOWL Visualization
-
-Interactive ontology visualization is available at:
-
-https://ardaomer.github.io/university-club-event-ontology/widoco/UniversityClubEventOntology/webvowl/index.html#
+- OWL
+- RDF
+- Turtle
+- GraphDB
+- SPARQL
+- SHACL
+- Widoco
+- GitHub Pages
 
 ---
 
-## Current Status
+## Team Members
 
-The repository currently contains:
+Arda Ömer
 
-- Initial ontology version
-- Extended ontology version (v2)
-- ORSD Version 1
-- ORSD Version 2
-- Phase 2 report
-- Widoco ontology documentation
-- WebVOWL visualization
-- GitHub Pages publication
+Manisa Celal Bayar University
+
+Knowledge Engineering and Ontologies
 
 ---
 
 ## Future Work
 
-Future improvements may include:
+Possible future extensions include:
 
-- SHACL validation shapes
-- SPARQL competency queries
-- Ontology reasoning support
-- Automated ontology population
-- Intelligent recommendation mechanisms
-- Ontology-based chatbot integration
-- Linked Open Data integration
+- Automatic ontology population using LLMs
+- Semantic question answering
+- Personalized event recommendation
+- SHACL advanced constraints
+- SPARQL endpoint deployment
+- Real-time knowledge graph updates
